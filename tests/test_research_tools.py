@@ -6,6 +6,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
+from build_provenance import analyze as analyze_provenance
 from catalogue import owner, validate_progress
 from elf_index import entry_file_offset, sections, unwind_index
 
@@ -86,3 +87,71 @@ class CatalogueTests(unittest.TestCase):
     def test_missing_component_rejected(self):
         d = copy.deepcopy(self.progress); del d['components']['visor']
         with self.assertRaises(ValueError): validate_progress(self.parts, d, self.root)
+
+
+def provenance_fixture(comment=b'\0rustc version 1.94.1 (e408947bf 2026-03-25)\0',
+                       rodata=b''):
+    data = bytearray(4096)
+    data[:6] = b'\x7fELF\x02\x01'
+    struct.pack_into('<Q', data, 40, 512)
+    struct.pack_into('<HHH', data, 58, 64, 4, 1)
+    names = b'\0.shstrtab\0.rodata\0.comment\0'
+    data[64:64+len(names)] = names
+    entries = [(0,0,0,0,0,0), (1,3,0,0,64,len(names)),
+               (names.index(b'.rodata'),1,2,0x400,1024,len(rodata)),
+               (names.index(b'.comment'),1,0x30,0x300,768,len(comment))]
+    for i, e in enumerate(entries):
+        struct.pack_into('<IIQQQQIIQQ', data, 512+i*64, *e, 0,0,1,0)
+    data[768:768+len(comment)] = comment
+    data[1024:1024+len(rodata)] = rodata
+    return data
+
+
+class ProvenanceTests(unittest.TestCase):
+    def test_extracts_comment_and_paths(self):
+        rodata = (b'/home/ubuntu/hl/code_Mainnet/base/src/time.rs\0'
+                  b'/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.217/src/lib.rs\0'
+                  b'/home/ubuntu/.cargo/git/checkouts/reth-e231042ee7db3fb7/3212af2/crates/primitives/src/lib.rs\0'
+                  b'/home/ubuntu/hl/code_Mainnet/z_vendor/h2/src/codec.rs\0'
+                  b'/rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/fmt.rs\0')
+        result = analyze_provenance(bytes(provenance_fixture(rodata=rodata)), '94', 'f' * 64)
+        self.assertEqual(result['build_root'], '/home/ubuntu/hl')
+        self.assertEqual(result['comment'], ['rustc version 1.94.1 (e408947bf 2026-03-25)'])
+        self.assertEqual([row['fields'] for row in result['registry']],
+                         [['home/ubuntu/.cargo/registry/src/', 'index.crates.io-1949cf8c6b5b557f', 'serde', '1.0.217']])
+        self.assertEqual([row['fields'][1:] for row in result['git_checkouts']],
+                         [['reth-e231042ee7db3fb7', '3212af2']])
+        self.assertEqual([row['fields'][1] for row in result['vendor']], ['h2'])
+        self.assertEqual([row['fields'][0] for row in result['rustc_commits']],
+                         ['e408947bfd200af42db322daf0fadfe7e26d3bd1'])
+        self.assertIn({'prefix': 'code_Mainnet/base', 'refs': 1}, result['layout'])
+
+    def test_absolute_path_with_preceding_junk_is_trimmed(self):
+        rodata = b'ERRORstatus/home/ubuntu/hl/code_Mainnet/base/src/ren.rs\0'
+        result = analyze_provenance(bytes(provenance_fixture(rodata=rodata)), '94', 'f' * 64)
+        self.assertEqual(result['sources']['absolute_count'], 1)
+        self.assertEqual([row['prefix'] for row in result['layout']],
+                         ['code_Mainnet', 'code_Mainnet/base', 'code_Mainnet/base/src'])
+
+    def test_relative_paths_stay_relative(self):
+        rodata = b'base/src/api_secrets.rs\0z_forks/hyper-fork/src/client.rs\0'
+        result = analyze_provenance(bytes(provenance_fixture(rodata=rodata)), '115', 'f' * 64)
+        self.assertEqual(result['sources']['relative_count'], 2)
+        self.assertEqual(result['sources']['absolute_count'], 0)
+        self.assertEqual(result['layout'], [])
+
+    def test_rejects_unterminated_comment(self):
+        with self.assertRaises(ValueError):
+            analyze_provenance(bytes(provenance_fixture(comment=b'\0rustc version 1.94.1')), '94', 'f' * 64)
+
+    def test_rejects_missing_comment(self):
+        data = provenance_fixture()
+        struct.pack_into('<Q', data, 512 + 3*64 + 32, 0)
+        with self.assertRaises(ValueError):
+            analyze_provenance(bytes(data), '94', 'f' * 64)
+
+    def test_rejects_two_build_roots(self):
+        rodata = (b'/home/ubuntu/hl/code_Mainnet/base/src/a.rs\0'
+                  b'/home/ubuntu/other/code_Mainnet/base/src/b.rs\0')
+        with self.assertRaises(ValueError):
+            analyze_provenance(bytes(provenance_fixture(rodata=rodata)), '94', 'f' * 64)
