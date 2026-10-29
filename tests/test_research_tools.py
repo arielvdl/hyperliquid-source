@@ -1,8 +1,10 @@
 import copy
+import io
 import json
 from pathlib import Path
 import struct
 import sys
+import tarfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
@@ -10,7 +12,19 @@ from build_provenance import analyze as analyze_provenance
 from catalogue import owner, validate_progress
 from elf_index import entry_file_offset, sections, unwind_index
 from git_fork_id import canonicalize, short_hash, siphash13_128
+from override_versions import compatible, floor_filter, line_floors, match, relative, requirement, strip_alloy
 from path_origin import Unmapped, classify, matrix
+
+
+def crate_file(files):
+    """A .crate tarball in memory, rooted at `crate-0.1.0`."""
+    body = io.BytesIO()
+    with tarfile.open(fileobj=body, mode='w:gz') as archive:
+        for name, data in files.items():
+            info = tarfile.TarInfo(f'crate-0.1.0/{name}')
+            info.size = len(data)
+            archive.addfile(info, io.BytesIO(data))
+    return body.getvalue()
 
 
 def fixture():
@@ -236,3 +250,69 @@ class PathOriginTests(unittest.TestCase):
         rows = matrix(['/home/ubuntu/hl/bincode-fork/src/lib.rs'], self.root)
         self.assertEqual(rows['collisions'], [])
         self.assertEqual(rows['crates']['bincode'], {'override:bincode-fork': 1})
+
+
+class OverrideVersionTests(unittest.TestCase):
+    root = '/home/ubuntu/hl'
+
+    def test_relative_strips_the_directory_and_dedups(self):
+        paths = ['/home/ubuntu/hl/hyper-fork/src/lib.rs',
+                 '/home/ubuntu/hl/hyper-fork/src/lib.rs',
+                 '/home/ubuntu/hl/hyper-fork/src/error.rs',
+                 '/home/ubuntu/hl/bincode-fork/src/lib.rs']
+        self.assertEqual(relative(paths, 'hyper-fork', self.root), ['src/error.rs', 'src/lib.rs'])
+
+    def test_relative_rejects_a_directory_without_paths(self):
+        with self.assertRaises(ValueError):
+            relative(['/home/ubuntu/hl/other/src/lib.rs'], 'hyper-fork', self.root)
+
+    def test_match_keeps_only_trees_holding_every_path(self):
+        files = [('0.1.0', {'src/lib.rs'}), ('0.2.0', {'src/lib.rs', 'src/enc/write.rs'})]
+        kept, missing = match(['src/lib.rs', 'src/enc/write.rs'], files)
+        self.assertEqual(kept, ['0.2.0'])
+        self.assertEqual(missing, [{'version': '0.1.0', 'missing': ['src/enc/write.rs']}])
+
+    def test_line_floors_take_the_highest_recorded_line(self):
+        data = (b'/home/ubuntu/hl/hyper-fork/src/proto/h1/conn.rs:909\x00'
+                b'/home/ubuntu/hl/hyper-fork/src/proto/h1/conn.rs:461\x00'
+                b'/home/ubuntu/hl/bincode-fork/src/lib.rs:12\x00')
+        self.assertEqual(line_floors(data, 'hyper-fork', self.root), {'src/proto/h1/conn.rs': 909})
+
+    def test_floor_filter_drops_a_file_shorter_than_the_panic_line(self):
+        floors = {'src/proto/h1/conn.rs': 909}
+        trees = [('0.14.2', {'src/proto/h1/conn.rs': 806}), ('0.14.29', {'src/proto/h1/conn.rs': 981})]
+        passing, short = floor_filter(['0.14.2', '0.14.29'], floors, trees)
+        self.assertEqual(passing, ['0.14.29'])
+        self.assertEqual(short, [{'version': '0.14.2', 'too_short': ['src/proto/h1/conn.rs:909>806']}])
+
+    def test_caret_keeps_the_minor_for_a_zero_major(self):
+        self.assertTrue(compatible('0.14.2', ['0.14.29']))
+        self.assertFalse(compatible('0.14.2', ['0.13.2']))
+        self.assertFalse(compatible('0.13', ['0.14.29']))
+
+    def test_caret_keeps_only_the_major_above_one(self):
+        self.assertTrue(compatible('1.44', ['1.44.2']))
+        self.assertFalse(compatible('2.0', ['1.44.2']))
+
+    def test_unreadable_requirement_is_not_a_verdict(self):
+        self.assertIsNone(compatible('*', ['1.0.0']))
+
+    def test_strip_alloy_splits_by_crate_directory(self):
+        rows = ['crates/primitives/src/lib.rs', 'crates/sol-types/src/lib.rs']
+        self.assertEqual(strip_alloy('hyper-alloy-core-fork', rows),
+                         {'primitives': ['src/lib.rs'], 'sol-types': ['src/lib.rs']})
+
+    def test_strip_alloy_rejects_an_unknown_crate_directory(self):
+        with self.assertRaises(ValueError):
+            strip_alloy('hyper-alloy-core-fork', ['crates/core/src/lib.rs'])
+
+    def test_requirement_reads_the_section_form(self):
+        text = b'[dependencies.hyper]\nversion = "0.14.2"\nfeatures = ["tcp"]\n'
+        self.assertEqual(requirement(crate_file({'Cargo.toml': text}), 'hyper'), '0.14.2')
+
+    def test_requirement_reads_the_inline_form(self):
+        text = b'[dependencies]\nbytes = { version = "1.11", optional = true }\n'
+        self.assertEqual(requirement(crate_file({'Cargo.toml': text}), 'bytes'), '1.11')
+
+    def test_requirement_is_none_without_the_dependency(self):
+        self.assertIsNone(requirement(crate_file({'Cargo.toml': b'[dependencies]\nserde = "1"\n'}), 'hyper'))

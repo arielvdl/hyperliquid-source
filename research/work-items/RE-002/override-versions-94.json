@@ -1,0 +1,3573 @@
+{
+  "artifact": "artifacts/node/94/hl-node",
+  "index": "https://index.crates.io",
+  "overrides": {
+    "bincode-fork": {
+      "candidates": [
+        "2.0.0",
+        "2.0.1"
+      ],
+      "crate_sha256": {
+        "0.0.1": "686d9162410f27feeeb84766ac081c5d5e9f090ea29135615d9e358700e80a65",
+        "0.0.10": "5960decebc664803ce6090872af73907ab4783204a6be5692d3218153bf18f96",
+        "0.0.11": "fda385db3d987bc9377d40bd4984c63b6df7fc52b48693204a8a187206833ce4",
+        "0.0.12": "d81f65694214cd8cfcefd55ec63745958fa29caca141df5bffa01dee5c2497cb",
+        "0.0.13": "8a6e1f0e56918119360d627caea62df89d78eaf8957f4594e86502a4762ed9bc",
+        "0.0.14": "76bbb56992513558272c09b9ce81186aeab6a736d57052fee1e340cabe690853",
+        "0.0.2": "bb97ed97d841e324f22726b77a8db502adb65c2c2bd31929b27700bbca63a53f",
+        "0.0.3": "37a8c9b6514193f2fe0891c3cd4f9200ca198db8d63f54dadbb9bccc6b2321d2",
+        "0.0.4": "e14e787a746b0ddfe021b72b0cc0c1c2d78e9176404babd15f6d9b498c6371fc",
+        "0.0.5": "a6f99ef0f5a750a136ce0b9faba23425b8632db617d6623927447af0a327b716",
+        "0.0.6": "e435e71004e8b612b3f45afe67dbf33ba531538826bce4d2b80b53c69993eb1d",
+        "0.0.7": "e202beddd383ef69e56e684069ab2d9dfdefd153859a3aeed4840402ebb63e11",
+        "0.0.8": "a0ad08663f4013b06a4d8bdfa39ae03d3ade2c0a49b037f6aaa918e0c9b6e5e4",
+        "0.0.9": "c7e7880debc747d2bd3c13e6268fd585ceec320a2762b70071d05d2c934d7610",
+        "0.1.0": "9b78e03fc1df7ca1b97dd6f057b93f8e6b20be708adc891302dbd5685a125a4d",
+        "0.1.1": "d8fa7121ea533b7ed025e4827d45c199256654f2cb5cf31c8600f7677839fd45",
+        "0.1.2": "8b9299a3a330413e8bc4e528ecb6c79985664e027b0b18d9a394b1e39bbc46ca",
+        "0.1.3": "67a71cb5b88e00e1c6caccc0641515d3065fc7f8d955c835d1e6d6cd7256c580",
+        "0.2.0": "540fc46d626761b189948224debdc3956d4134ea3e97a856cab41c934353488d",
+        "0.2.1": "9513918e44b2792ec0d0d6ee17ed322246d84d317e8e7012d57873611250566e",
+        "0.2.2": "239b474e0faff288c8b926f7ceee83ba117bfcfe8e39bbfbf67a779d049ddd86",
+        "0.3.0": "951498c868b0683e1ba67afcdd6b1c3def08a713e66197aa17be8fad56cbaab5",
+        "0.4.0": "1cf2680c3c582485ba24c43f568fc2fe7ca33bf1bc63522bc9c17e0f2ac70576",
+        "0.4.1": "60f89d68caf4f2e8a94efd192a2b8393869e72336dea4e0fe077cc6eb5f2057e",
+        "0.5.0": "457ad8cffb56bb459718a66089cf47bb10d5f8c0f29035ed84f83234233b0edb",
+        "0.5.1": "390e733a165bbae27feef191e6087d7409783adfdbc11101589a2f64d06584ad",
+        "0.5.2": "9252e77a14f50ed3f3a2dbddb555e5275275e199b67f53c6a006fddd5137abef",
+        "0.5.3": "9794c5a97223c6bee0acbff99350e3854cbfd18e3f332576d3b11bfb2be34f0a",
+        "0.5.4": "0e3d0bfc116d2c30299e845c5d95f05ada9d6951c2cbeb579268cd10c05ed1d9",
+        "0.5.6": "5ebf196f284c03a75b48295fc221c7451eaed2c2173102b9a0255bf5ece01577",
+        "0.5.7": "522d077c9887f5519c46f271d99c4385bc50b79b13b1de774ee16945b4ba237c",
+        "0.5.8": "27a25c68aa14f9cee1196638366b69c72037a02f9575244010e74d1045427a6c",
+        "0.5.9": "aa413a0580cf7d54f1938c13462fd32cff9099338bf161e15870cb05021df745",
+        "0.6.0": "9fbba641f73d3e74a5431d4a6d9e42a70bcce76d466d796c852ba1db31ba41bc",
+        "0.6.1": "55eb0b7fd108527b0c77860f75eca70214e11a8b4c6ef05148c54c05a25d48ad",
+        "0.7.0": "bea6e613eeed56804328309c4227e61a0326a8810e1392d91faeb2124b77f43e",
+        "0.8.0": "e103c8b299b28a9c6990458b7013dc4a8356a9b854c51b9883241f5866fac36e",
+        "0.8.1": "6e4a2d3bab374f96192eade8f41914373d7b5fcf030ca2f45141f1e939057259",
+        "0.9.0": "b92615d57e4048e480bd7e3c2d7f6ec252819fffec95efbc30ec7c68744aa66c",
+        "0.9.1": "9d3fb369af639822830328794eba2501b3479652fcd021b2aeb1ed4984202afd",
+        "0.9.2": "9a6301db0b49fb63551bc15b5ae348147101cdf323242b93ec7546d5002ff1af",
+        "1.0.0": "bda13183df33055cbb84b847becce220d392df502ebe7a4a78d7021771ed94d0",
+        "1.0.1": "9f2fb9e29e72fd6bc12071533d5dc7664cb01480c59406f656d7ac25c7bd8ff7",
+        "1.1.1": "58470ad6460f0b0e89b0df5f17b8bd77ebae26af69dca0bd9ddc8b9e38abb2ff",
+        "1.1.2": "3efe0b4c8eaeed8600549c29f538a6a11bf422858d0ed435b1d70ec4ab101190",
+        "1.1.3": "959c8e54c1ad412ffeeb95f05a9cade02d2d40a7b3c2f852d3353148f4beff35",
+        "1.1.4": "9f04a5e50dc80b3d5d35320889053637d15011aed5e66b66b37ae798c65da6f7",
+        "1.2.0": "b8ab639324e3ee8774d296864fbc0dbbb256cf1a41c490b94cba90c082915f92",
+        "1.2.1": "5753e2a71534719bf3f4e57006c3a4f0d2c672a4b676eec84161f763eca87dbf",
+        "1.3.0": "1596f02a1f089e295623489ec1f9bb3c1e4795b3b9a0d97931c340a517634381",
+        "1.3.1": "f30d3a39baa26f9651f17b375061f3233dde33424a8b72b0dbe93a68a0bc896d",
+        "1.3.2": "d175dfa69e619905c4c3cdb7c3c203fa3bdd5d51184e3afdb2742c0280493772",
+        "1.3.3": "b1f45e9417d87227c7a56d22e471c6206462cba514c7590c09aff4cf6d1ddcad",
+        "2.0.0": "3ad1fa75f77bbd06f187540aa1d70ca50b80b27ce85e7f41c0ce7ff42b34ed3b",
+        "2.0.1": "36eaf5d7b090263e8150820482d5d93cd964a81e4019913c972f4edcc6edb740",
+        "3.0.0": "fd6a120d2e16b3e1b4a24bd70f23b12d3e16b81f113364a26935f8db7245452d"
+      },
+      "excluded_missing_path": [
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.2"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.3"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.4"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.5"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.6"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.7"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.8"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.9"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.10"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.11"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.12"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.13"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.0.14"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.1.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.1.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.1.2"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.1.3"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.2.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.2.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.2.2"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.3.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.4.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.4.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.2"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.3"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.4"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.6"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.7"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.8"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.5.9"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.6.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.6.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.7.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.8.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.8.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.9.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.9.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "0.9.2"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.0.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.0.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.1.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.1.2"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.1.3"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.1.4"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.2.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.2.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.3.0"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.3.1"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.3.2"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "1.3.3"
+        },
+        {
+          "missing": [
+            "src/de/decoder.rs",
+            "src/de/impls.rs",
+            "src/enc/write.rs"
+          ],
+          "version": "3.0.0"
+        }
+      ],
+      "excluded_requirement": [],
+      "excluded_short_file": [],
+      "panic_lines": 0,
+      "paths": 4,
+      "upstream": "bincode"
+    },
+    "hyper-alloy-core-fork:alloy-primitives": {
+      "candidates": [
+        "0.8.10",
+        "0.8.11",
+        "0.8.12",
+        "0.8.13",
+        "0.8.14",
+        "0.8.15",
+        "0.8.16",
+        "0.8.17",
+        "0.8.18",
+        "0.8.19",
+        "0.8.20",
+        "0.8.21",
+        "0.8.22",
+        "0.8.23",
+        "0.8.24",
+        "0.8.25",
+        "0.8.26",
+        "0.8.4",
+        "0.8.5",
+        "0.8.6",
+        "0.8.7",
+        "0.8.8",
+        "0.8.9",
+        "1.0.0",
+        "1.1.0",
+        "1.1.1",
+        "1.1.2",
+        "1.1.3",
+        "1.2.0",
+        "1.2.1",
+        "1.3.0",
+        "1.3.1",
+        "1.4.0",
+        "1.4.1",
+        "1.5.0",
+        "1.5.1",
+        "1.5.2",
+        "1.5.3",
+        "1.5.4",
+        "1.5.5",
+        "1.5.6",
+        "1.5.7",
+        "1.6.0",
+        "1.6.1",
+        "1.7.0",
+        "1.7.1",
+        "1.7.2",
+        "1.7.3"
+      ],
+      "crate_sha256": {
+        "0.1.0": "1a317569918dd9e0fd3efd36a63bf81bffe764ca70ccdd6505943dccbf3e3032",
+        "0.2.0": "9f09d3cd21353cf2f41f401e35093390f2a238ce0a72af0f6fc6be5157f525c7",
+        "0.3.0": "2ffce219323b389e69f7448bc41a1913cc96dc584ca4bdae98bc46440fffdd3e",
+        "0.3.1": "66f73f11dcfbf8bb763d88fb1d082fe7cca0a00d3227d9921bdbd52ce5e013e2",
+        "0.3.2": "d66a8edd8b35a3338cd596d6c60c4c6f491f7a773a505ddcde9d19554c3ef19f",
+        "0.3.3": "e416903084d3392ebd32d94735c395d6709415b76c7728e594d3f996f2b03e65",
+        "0.4.0": "6b4084879b7257d5b95b9009837c07a1868bd7d60e66418a7764b9b580ae64e0",
+        "0.4.1": "72a2c1a880fa8257fc585ac82513e0747f54659d005e4ee2538325b2a4986b10",
+        "0.4.2": "a0628ec0ba5b98b3370bb6be17b12f23bfce8ee4ad83823325a20546d9b03b78",
+        "0.5.0": "f5def4b5e1bb8fe7ea37eeac1063246d4ef26f56cbdccf864a5a6bdcb80e91f4",
+        "0.5.1": "3a3877a2fa7474d9367d01ab43e33a4a4eeedf9bf7ec481533520686e956703b",
+        "0.5.2": "08ca2c09d5911548a5cb620382ea0e1af99d3c898ce0efecbbd274a4676cf53e",
+        "0.5.3": "6c0e5e60ff0e0c34c553822dabcfe0f5fece5a8c52f08a915be8c737de4b03fa",
+        "0.5.4": "9c234f92024707f224510ff82419b2be0e1d8e1fd911defcac5a085cd7f83898",
+        "0.6.0": "3729132072f369bc4e8e6e070f9cf4deb3490fc9b9eea6f71f75ec19406df811",
+        "0.6.1": "bfb880d7454cecebf82996b3855875d53d9bd884e9261b2c09718be053f608dd",
+        "0.6.2": "f4b6fb2b432ff223d513db7f908937f63c252bee0af9b82bfd25b0a5dd1eb0d8",
+        "0.6.3": "ef197eb250c64962003cb08b90b17f0882c192f4a6f2f544809d424fd7cb0e7d",
+        "0.6.4": "600d34d8de81e23b6d909c094e23b3d357e01ca36b78a8c5424c501eedbe86f0",
+        "0.7.0": "99bbad0a6b588ef4aec1b5ddbbfdacd9ef04e00b979617765b03174318ee1f3a",
+        "0.7.1": "50c715249705afa1e32be79dabfd35e2ef0f1cc02ad2cf48c9d1e20026ee637b",
+        "0.7.2": "525448f6afc1b70dd0f9d0a8145631bf2f5e434678ab23ab18409ca264cae6b3",
+        "0.7.3": "5c466f488c032bac81e925fcd9f22bc0a50ae7a71f3ba27cfc2911b8a47c1938",
+        "0.7.4": "db8aa973e647ec336810a9356af8aea787249c9d00b1525359f3db29a68d231b",
+        "0.7.5": "5277af0cbcc483ee6ad2c1e818090b5928d27f04fd6580680f31c1cf8068bcc2",
+        "0.7.6": "f783611babedbbe90db3478c120fb5f5daacceffc210b39adc0af4fe0da70bad",
+        "0.7.7": "ccb3ead547f4532bc8af961649942f0b9c16ee9226e26caa3f38420651cc0bf4",
+        "0.8.0": "a767e59c86900dd7c3ce3ecef04f3ace5ac9631ee150beb8b7d22f7fa3bbb2d7",
+        "0.8.1": "19d1d1bdfba287209ee749a985230685c2ff8bdabe5fed6f699f72f22bb72c95",
+        "0.8.10": "8edae627382349b56cd6a7a2106f4fd69b243a9233e560c55c2e03cabb7e1d3c",
+        "0.8.11": "fd58d377699e6cfeab52c4a9d28bdc4ef37e2bd235ff2db525071fe37a2e9af5",
+        "0.8.12": "9fce5dbd6a4f118eecc4719eaa9c7ffc31c315e6c5ccde3642db927802312425",
+        "0.8.13": "3aeeb5825c2fc8c2662167058347cd0cafc3cb15bcb5cdb1758a63c2dca0409e",
+        "0.8.14": "9db948902dfbae96a73c2fbf1f7abec62af034ab883e4c777c3fd29702bd6e2c",
+        "0.8.15": "6259a506ab13e1d658796c31e6e39d2e2ee89243bcc505ddc613b35732e0a430",
+        "0.8.16": "0540fd0355d400b59633c27bd4b42173e59943f28e9d3376b77a24771d432d04",
+        "0.8.17": "694b0e5e47629601ea9301d9979402685ca6246c47087ce0dd0023b27723975d",
+        "0.8.18": "788bb18e8f61d5d9340b52143f27771daf7e1dccbaf2741621d2493f9debf52e",
+        "0.8.19": "ec878088ec6283ce1e90d280316aadd3d6ce3de06ff63d68953c855e7e447e92",
+        "0.8.2": "ccb865df835f851b367ae439d6c82b117ded971628c8888b24fed411a290e38a",
+        "0.8.20": "bc1360603efdfba91151e623f13a4f4d3dc4af4adc1cbd90bf37c81e84db4c77",
+        "0.8.21": "478bedf4d24e71ea48428d1bc278553bd7c6ae07c30ca063beb0b09fe58a9e74",
+        "0.8.22": "8c66bb6715b7499ea755bde4c96223ae8eb74e05c014ab38b9db602879ffb825",
+        "0.8.23": "eacedba97e65cdc7ab592f2b22ef5d3ab8d60b2056bc3a6e6363577e8270ec6f",
+        "0.8.24": "7283185baefbe66136649dc316c9dcc6f0e9f1d635ae19783615919f83bc298a",
+        "0.8.25": "8c77490fe91a0ce933a1f219029521f20fc28c2c0ca95d53fa4da9c00b8d9d4e",
+        "0.8.26": "777d58b30eb9a4db0e5f59bc30e8c2caef877fee7dc8734cf242a51a60f22e05",
+        "0.8.3": "411aff151f2a73124ee473708e82ed51b2535f68928b6a1caa8bc1246ae6f7cd",
+        "0.8.4": "0f778fe4183cecaec41361e65869e81e748c44a77fa3e6ba20219ca92be33a19",
+        "0.8.5": "260d3ff3bff0bb84599f032a2f2c6828180b0ea0cd41fdaf44f39cef3ba41861",
+        "0.8.6": "a289ffd7448036f2f436b377f981c79ce0b2090877bad938d43387dc09931877",
+        "0.8.7": "8ecb848c43f6b06ae3de2e4a67496cbbabd78ae87db0f1248934f15d76192c6a",
+        "0.8.8": "38f35429a652765189c1c5092870d8360ee7b7769b09b06d89ebaefd34676446",
+        "0.8.9": "c71738eb20c42c5fb149571e76536a0f309d142f3957c28791662b96baf77a3d",
+        "1.0.0": "70b98b99c1dcfbe74d7f0b31433ff215e7d1555e367d90e62db904f3c9d4ff53",
+        "1.1.0": "6a12fe11d0b8118e551c29e1a67ccb6d01cc07ef08086df30f07487146de6fa1",
+        "1.1.1": "dd197479be097918475c992db778f9989d828b1c2efc37dcc7655409b1eaac7a",
+        "1.1.2": "18c35fc4b03ace65001676358ffbbaefe2a2b27ee50fe777c345082c7c888be8",
+        "1.1.3": "274f4961a08cd5320bfa0e2fd861eb2d1c3b3a45873276dfee0ea33083aa3823",
+        "1.2.0": "a326d47106039f38b811057215a92139f46eef7983a4b77b10930a0ea5685b1e",
+        "1.2.1": "6177ed26655d4e84e00b65cb494d4e0b8830e7cae7ef5d63087d445a2600fb55",
+        "1.3.0": "3cfebde8c581a5d37b678d0a48a32decb51efd7a63a08ce2517ddec26db705c8",
+        "1.3.1": "bc9485c56de23438127a731a6b4c87803d49faf1a7068dcd1d8768aca3a9edb9",
+        "1.4.0": "5b77f7d5e60ad8ae6bd2200b8097919712a07a6db622a4b201e7ead6166f02e5",
+        "1.4.1": "355bf68a433e0fd7f7d33d5a9fc2583fde70bf5c530f63b80845f8da5505cf28",
+        "1.5.0": "5c850e6ccbd34b8a463a1e934ffc8fc00e1efc5e5489f2ad82d7797949f3bd4e",
+        "1.5.1": "7db950a29746be9e2f2c6288c8bd7a6202a81f999ce109a2933d2379970ec0fa",
+        "1.5.2": "f6a0fb18dd5fb43ec5f0f6a20be1ce0287c79825827de5744afaa6c957737c33",
+        "1.5.3": "f1841ce147fa6cfdeb6b7751e2583b605bb8eef4238a2d3e0880b5cb3aba0e83",
+        "1.5.4": "3b88cf92ed20685979ed1d8472422f0c6c2d010cec77caf63aaa7669cc1a7bc2",
+        "1.5.5": "ca5de724d1d8ab866fc84fe45fcbf08708a002f7e9f7cc27256e94149cc193f7",
+        "1.5.6": "66b1483f8c2562bf35f0270b697d5b5fe8170464e935bd855a4c5eaf6f89b354",
+        "1.5.7": "de3b431b4e72cd8bd0ec7a50b4be18e73dab74de0dba180eef171055e5d5926e",
+        "1.6.0": "4885c1409b6936c4898e646ef58baf6ec54edaf6d8179f79df805a7b85b7cf3e",
+        "1.6.1": "f007e257069855bdf21d27762fd3f3705a613f805c9a08309bf353503f081d71",
+        "1.7.0": "7d851d57d6c8a93053eef468864a4f8a777bf6649cd2f833e073942c0d58274b",
+        "1.7.1": "9c902f0ca3f8353c41e3e1ec3cf26be49412525bc48ab9d3c4710d7be4f01832",
+        "1.7.2": "ce7b00f0cb42c66ec353076ded1dff1fbf818f6e0e26c40c8a8456c04483fca4",
+        "1.7.3": "d5e9dbd49258ac3ab893a481d46be29b58be7f734dcac46cd80b6b13ee36566c"
+      },
+      "excluded_missing_path": [
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.1.0"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.2.0"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.3.0"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.3.1"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.3.2"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.3.3"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.4.0"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.4.1"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.4.2"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.5.0"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.5.1"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.5.2"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.5.3"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.5.4"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.6.0"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.6.1"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.6.2"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.6.3"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.6.4"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.7.0"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.7.1"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.7.2"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.7.3"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.7.4"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.7.5"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.7.6"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.7.7"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.8.0"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.8.1"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.8.2"
+        },
+        {
+          "missing": [
+            "src/log/mod.rs"
+          ],
+          "version": "0.8.3"
+        }
+      ],
+      "excluded_requirement": [],
+      "excluded_short_file": [],
+      "panic_lines": 0,
+      "paths": 2,
+      "upstream": "alloy-primitives"
+    },
+    "hyper-alloy-core-fork:alloy-sol-types": {
+      "candidates": [
+        "0.8.10",
+        "0.8.11",
+        "0.8.12",
+        "0.8.13",
+        "0.8.14",
+        "0.8.15",
+        "0.8.16",
+        "0.8.17",
+        "0.8.18",
+        "0.8.19",
+        "0.8.20",
+        "0.8.21",
+        "0.8.22",
+        "0.8.23",
+        "0.8.24",
+        "0.8.25",
+        "0.8.26",
+        "0.8.4",
+        "0.8.5",
+        "0.8.6",
+        "0.8.7",
+        "0.8.8",
+        "0.8.9",
+        "1.0.0",
+        "1.1.0",
+        "1.1.1",
+        "1.1.2",
+        "1.1.3",
+        "1.2.0",
+        "1.2.1",
+        "1.3.0",
+        "1.3.1",
+        "1.4.0",
+        "1.4.1",
+        "1.5.0",
+        "1.5.1",
+        "1.5.2",
+        "1.5.3",
+        "1.5.4",
+        "1.5.5",
+        "1.5.6",
+        "1.5.7",
+        "1.6.0",
+        "1.6.1",
+        "1.7.0",
+        "1.7.1",
+        "1.7.2",
+        "1.7.3"
+      ],
+      "crate_sha256": {
+        "0.2.0": "aa13e1e05d0f45f042f9f872a1ff71717d446e563fa9c5a29ab59c4a0afb4e7f",
+        "0.3.0": "6871798f0c7ae860604b1bbbefb27593eb397094b3536a167c02ff25cd6b788b",
+        "0.3.1": "d5f347cb6bb307b3802ec455ef43ce00f5e590e0ceca3d2f3b070f5ee367e235",
+        "0.3.2": "eaa7c9a4354b1ff9f1c85adf22802af046e20e4bb55e19b9dc6ca8cbc6f7f4e5",
+        "0.4.0": "fa7e42aa2983db6676af5d762bc8d9371dd74f5948739790d3080c3d652a957b",
+        "0.4.1": "ecf238593c05025b69fd1b785135e650c7796b5bd514d83afe5294225ee81e82",
+        "0.4.2": "98d7107bed88e8f09f0ddcc3335622d87bfb6821f3e0c7473329fb1cfad5e015",
+        "0.5.0": "97d483e9c6db659cdb24fc736684ef68b743705fbdb0677c6404815361871b92",
+        "0.5.1": "8c4c333ed7d5a4d87e3b8ad2ce230d4f9347b9e43faf98ad16ba58bf318cd023",
+        "0.5.2": "f81aa34725607be118c395d62c1d8d97c8a343dd1ada5370ed508ed5232eab6a",
+        "0.5.3": "c169266a4b5ecf6f471947be10690f0aa295063774853b50540708b267a96e51",
+        "0.5.4": "2a059d4d2c78f8f21e470772c75f9abd9ac6d48c2aaf6b278d1ead06ed9ac664",
+        "0.6.0": "783eb720b73d38f9d4c1fb9890e4db6bc8c708f7aa77d3071a19e06091ecd1c9",
+        "0.6.1": "0782611d9f2efff0a885fbe7ee44505ffd6849192b7e7937e64d4861d89930c8",
+        "0.6.2": "6c08f62ded7ce03513bfb60ef5cad4fff5d4f67eac6feb4df80426b7b9ffb06e",
+        "0.6.3": "3e7c6a8c492b1d6a4f92a8fc6a13cf39473978dd7d459d7221969ce5a73d97cd",
+        "0.6.4": "ad09ec5853fa700d12d778ad224dcdec636af424d29fad84fb9a2f16a5b0ef09",
+        "0.7.0": "43bc2d6dfc2a19fd56644494479510f98b1ee929e04cf0d4aa45e98baa3e545b",
+        "0.7.1": "afaffed78bfb17526375754931e045f96018aa810844b29c7aef823266dd4b4b",
+        "0.7.2": "399287f68d1081ed8b1f4903c49687658b95b142207d7cb4ae2f4813915343ef",
+        "0.7.3": "9da874df320c90c0f33567a90a74ba1f988e135e7d199fe68e6977cba9e0142e",
+        "0.7.4": "40a64d2d2395c1ac636b62419a7b17ec39031d6b2367e66e9acbf566e6055e9c",
+        "0.7.5": "6eb5e6234c0b62514992589fe1578f64d418dbc8ef5cd1ab2d7f2f568f599698",
+        "0.7.6": "a49042c6d3b66a9fe6b2b5a8bf0d39fc2ae1ee0310a2a26ffedd79fb097878dd",
+        "0.7.7": "a91ca40fa20793ae9c3841b83e74569d1cc9af29a2f5237314fd3452d51e38c7",
+        "0.8.0": "577e262966e92112edbd15b1b2c0947cc434d6e8311df96d3329793fe8047da9",
+        "0.8.1": "53be2dde91d22bc1e398e26bd42bdac441705f205a4cbaf4f3abb9273867ed39",
+        "0.8.10": "aa828bb1b9a6dc52208fbb18084fb9ce2c30facc2bfda6a5d922349b4990354f",
+        "0.8.11": "374d7fb042d68ddfe79ccb23359de3007f6d4d53c13f703b64fb0db422132111",
+        "0.8.12": "6520d427d4a8eb7aa803d852d7a52ceb0c519e784c292f64bb339e636918cf27",
+        "0.8.13": "cff34e0682d6665da243a3e81da96f07a2dd50f7e64073e382b1a141f5a2a2f6",
+        "0.8.14": "c9dc0fffe397aa17628160e16b89f704098bf3c9d74d5d369ebc239575936de5",
+        "0.8.15": "1174cafd6c6d810711b4e00383037bdb458efc4fe3dbafafa16567e0320c54d8",
+        "0.8.16": "c766e4979fc19d70057150befe8e3ea3f0c4cbc6839b8eaaa250803451692305",
+        "0.8.17": "886b8f1f1851186f06cbe10758cb4acdc0137a5cb211300f0155d92794f345e2",
+        "0.8.18": "e3b478bc9c0c4737a04cd976accde4df7eba0bdc0d90ad6ff43d58bc93cf79c1",
+        "0.8.19": "c1382302752cd751efd275f4d6ef65877ddf61e0e6f5ac84ef4302b79a33a31a",
+        "0.8.2": "83665e5607725a7a1aab3cb0dea708f4a05e70776954ec7f0a9461439175c957",
+        "0.8.20": "75f306fc801b3aa2e3c4785b7b5252ec8b19f77b30e3b75babfd23849c81bd8c",
+        "0.8.21": "6044800da35c38118fd4b98e18306bd3b91af5dedeb54c1b768cf1b4fb68f549",
+        "0.8.22": "5f819635439ebb06aa13c96beac9b2e7360c259e90f5160a6848ae0d94d10452",
+        "0.8.23": "767957235807b021126dca1598ac3ef477007eace07961607dc5f490550909c7",
+        "0.8.24": "4f5ff802859e2797d022dc812b5b4ee40d829e0fb446c269a87826c7f0021976",
+        "0.8.25": "d43d5e60466a440230c07761aa67671d4719d46f43be8ea6e7ed334d8db4a9ab",
+        "0.8.26": "6e960c4b52508ef2ae1e37cae5058e905e9ae099b107900067a503f8c454036f",
+        "0.8.3": "1eb88e4da0a1b697ed6a9f811fdba223cf4d5c21410804fd1707836af73a462b",
+        "0.8.4": "092cce3d2618d5e16e04306796c839c2b20585b591dcc9d64d0897a10c5bd086",
+        "0.8.5": "d86a533ce22525969661b25dfe296c112d35eb6861f188fd284f8bd4bb3842ae",
+        "0.8.6": "4aa666f1036341b46625e72bd36878bf45ad0185f1b88601223e1ec6ed4b72b1",
+        "0.8.7": "8e448d879903624863f608c552d10efb0e0905ddbee98b0049412799911eb062",
+        "0.8.8": "c2841af22d99e2c0f82a78fe107b6481be3dd20b89bfb067290092794734343a",
+        "0.8.9": "086f41bc6ebcd8cb15f38ba20e47be38dd03692149681ce8061c35d960dbf850",
+        "1.0.0": "c02635bce18205ff8149fb752c753b0a91ea3f3c8ee04c58846448be4811a640",
+        "1.1.0": "5460a975434ae594fe2b91586253c1beb404353b78f0a55bf124abcd79557b15",
+        "1.1.1": "7a40bb1d846104f585399fd62602b0d46444357d97f3b77a3b8228889c3ceed3",
+        "1.1.2": "584cb97bfc5746cb9dcc4def77da11694b5d6d7339be91b7480a6a68dc129387",
+        "1.1.3": "ef95d325a32cef807cf26ef838a0ec78b887d1a0c58018207ec02a984e96cfd4",
+        "1.2.0": "6185e98a79cf19010722f48a74b5a65d153631d2f038cabd250f4b9e9813b8ad",
+        "1.2.1": "58377025a47d8b8426b3e4846a251f2c1991033b27f517aade368146f6ab1dfe",
+        "1.3.0": "a285b46e3e0c177887028278f04cc8262b76fd3b8e0e20e93cea0a58c35f5ac5",
+        "1.3.1": "f5383d34ea00079e6dd89c652bcbdb764db160cef84e6250926961a0b2295d04",
+        "1.4.0": "c3c8a9a909872097caffc05df134e5ef2253a1cdb56d3a9cf0052a042ac763f9",
+        "1.4.1": "70319350969a3af119da6fb3e9bddb1bce66c9ea933600cb297c8b1850ad2a3c",
+        "1.5.0": "35287d9d821d5f26011bcd8d9101340898f761c9933cf50fca689bb7ed62fdeb",
+        "1.5.1": "dc1038284171df8bfd48befc0c7b78f667a7e2be162f45f07bd1c378078ebe58",
+        "1.5.2": "09aeea64f09a7483bdcd4193634c7e5cf9fd7775ee767585270cd8ce2d69dc95",
+        "1.5.3": "67a8a2c35dbb545c6945b933957556693839df252c712194bf201c9e528670a3",
+        "1.5.4": "fc442cc2a75207b708d481314098a0f8b6f7b58e3148dd8d8cc7407b0d6f9385",
+        "1.5.5": "2e0b1f348acd1524890aa46f6aa02359dcbf39b86631202d86288bd45a097822",
+        "1.5.6": "fdf7effe4ab0a4f52c865959f790036e61a7983f68b13b75d7fbcedf20b753ce",
+        "1.5.7": "64612d29379782a5dde6f4b6570d9c756d734d760c0c94c254d361e678a6591f",
+        "1.6.0": "384cf252de0db2dec52821eac037a7f57e2aa33fe5b900ce6fe39973402341f1",
+        "1.6.1": "d96e74d6213180f78dbdccddce8af02a639c160c94b0a543fa35c77c58b8a7fc",
+        "1.7.0": "c259e0544bdf185257cc1c18c764093756d964dc392e38e6b89d91fe7f26ed3a",
+        "1.7.1": "adfc2ba3fb0e865de4934bcad6d37fc51e9ffcd5294be1322eab38e4494e051b",
+        "1.7.2": "1f40e33a0f588dde548c3b6767a71e61b593421a8c1b253b9cf1441dc7cf7ab5",
+        "1.7.3": "3e6f87cf007caa54e95455875fbd25879b008d0d9c7c340a2c258b3a3400a28c"
+      },
+      "excluded_missing_path": [
+        {
+          "missing": [
+            "src/abi/encoder.rs",
+            "src/abi/token.rs",
+            "src/types/function.rs",
+            "src/utils.rs"
+          ],
+          "version": "0.2.0"
+        },
+        {
+          "missing": [
+            "src/abi/encoder.rs",
+            "src/abi/token.rs"
+          ],
+          "version": "0.3.0"
+        },
+        {
+          "missing": [
+            "src/abi/encoder.rs",
+            "src/abi/token.rs"
+          ],
+          "version": "0.3.1"
+        },
+        {
+          "missing": [
+            "src/abi/encoder.rs",
+            "src/abi/token.rs"
+          ],
+          "version": "0.3.2"
+        }
+      ],
+      "excluded_requirement": [],
+      "excluded_short_file": [],
+      "panic_lines": 0,
+      "paths": 4,
+      "upstream": "alloy-sol-types"
+    },
+    "hyper-fork": {
+      "candidates": [
+        "0.14.9",
+        "0.14.10",
+        "0.14.11",
+        "0.14.12",
+        "0.14.13",
+        "0.14.14",
+        "0.14.15",
+        "0.14.16",
+        "0.14.17",
+        "0.14.18",
+        "0.14.19",
+        "0.14.20",
+        "0.14.21",
+        "0.14.22",
+        "0.14.23",
+        "0.14.24",
+        "0.14.25",
+        "0.14.26",
+        "0.14.27",
+        "0.14.28",
+        "0.14.29",
+        "0.14.30",
+        "0.14.31",
+        "0.14.32"
+      ],
+      "crate_sha256": {
+        "0.0.1": "4f3abad9b6127aa470fe7fa238e6ee3dabaf1ebf89914b9f507b33d413373e07",
+        "0.0.10": "8df7b9e612a6a2dd3cacf50a18d83aacb696b4ea334e1be403f78c95978b8881",
+        "0.0.11": "323ac236c20515ba4f7b41a9e1e82fd5a0e5fd14d829c3f45adb90e542b44d06",
+        "0.0.12": "abf3c20b5b6e37b398e3c8b796ddc4b23ac2b2ba7af360bba1cf8b6a4f2066a3",
+        "0.0.13": "fd3539c070823a66a80062463c202b29bd5579edc830232ee391562744e07ced",
+        "0.0.14": "d68e686638bb947c1e31e849abf10d0624f65b83f568593befc505ef4a1e4cb8",
+        "0.0.15": "58758ae32db78b8a659064105765a99797038712b6f40260118cbbb7de1a0f3e",
+        "0.0.16": "8713544c7696604bc48f93283c7e1e32b8fae0976d29b32d29941963a8422d00",
+        "0.0.17": "a89a8a2247cda233cd2d24686388dec18346c9ca20bcb1c865360a34669d23b0",
+        "0.0.18": "282662a56c3abb16da5fa541daaed5787b6edef3e0564428863ac22683a4da3e",
+        "0.0.19": "66a4a862bb453927896735b41732082410da95ce5e485ebe15c6240c0e7849dd",
+        "0.0.2": "05691e3bf6127d83cc02c63727e66cd32c66e05be8d8af7d1344e26968dfc9d0",
+        "0.0.20": "3b441b5733f76676fe20606eab2358f9aa8c3071d0cc5d4baa1459cbfe70f7ed",
+        "0.0.21": "6d721bf342b85ac47878544c7e4c24141653a4d302ea9e92a16874e12f1b1fa0",
+        "0.0.3": "4f226c2e1ee59efed7e98eb887445a44eb6cf8ea14e611f917b1959dc8d8a8dd",
+        "0.0.4": "0c7d297b481ea2c011ffd82ac4480052b03ccef597bc031852cbe761b7612e4c",
+        "0.0.5": "6f785e926419ad3c3243f555edf519d5f0f93820e88a52ab4706a40cab014ece",
+        "0.0.6": "d4213557f9d3d70a1d818f24fabe7f8cd2a3b3955f3560d432b6d7db1202e6e5",
+        "0.0.7": "64749c808fd5c5845ae911bcf550b2240972d6023408834207386e0431362c41",
+        "0.0.8": "2fa116672b2cfc1e4d04328fef30a8d6efd1344156f2768dc6d9d812a87f85de",
+        "0.0.9": "7da3099e929114343a7419606f59e75f71e5ecb1b2426e7e4ba66d8ad131f642",
+        "0.1.0": "010fa6f4f487dfe2c45ba676800023950966d0116ea6699767cccfd9c486d160",
+        "0.1.1": "1ea63c91dbc93082597030b7107cc61ce40a3bcc5d35205d27da72efe6dbba27",
+        "0.1.10": "a6d3910a7990e2b71e16e7bf7ccf2ab2238a4779753998e569a0286958eaa2de",
+        "0.1.11": "d261ff1e7ba93344a23d632c5385d196644955780b66289a10cbbd5bad6efe31",
+        "0.1.12": "64a01f088263f00ce26aff3626cdb2a33a0badb584f358ee1c95a48432d2c0d1",
+        "0.1.13": "afd1e839dbf9ae2954f6d7329ecb574d9b70354642f29d0da6b8d6d41a334ec4",
+        "0.1.2": "46a82def73f132fa3cec87cd010de9ed795da44ec5d4ff0bb9a9952fb6e91db0",
+        "0.1.3": "8f6ea470b36762d65573e0309523c2b503f4b0b628cf3db14a0f854f3c21b9d5",
+        "0.1.4": "09e353a25d9969001a1546579cb7a2b4fbea8e24b53194a5c77cb70b2196ee4d",
+        "0.1.5": "b882fbbf400ace0005210a61e3f12fa69a0fba9686aa2e1fe5e5b1983473bf64",
+        "0.1.6": "6597e4564f7ed8244fb92f8ce5e5c047708e42fab5e9c9750b481429fe10de34",
+        "0.1.7": "0d10475b6a8ac1e4e70eaa367ad79c7a2f2aef62140ee5c8a45ba9f8a905a122",
+        "0.1.8": "5d5fb0bfdf1f6c773586bc2f1f5eb54d8c1be50946d0605535f7c4d7abda9220",
+        "0.1.9": "45b3181ee8477ec7815226c4a232dc53f70bf060dcd6bc1a86c09b032c1c9fc3",
+        "0.10.0": "305b3c3cc13864a07a54d3ffd162ac0c3e3e124173cf74039b27c8459f019038",
+        "0.10.1": "b40943a4eb59862aaa01cc7d1c2fff88f9c440b53122144710e19a5421bb2e42",
+        "0.10.10": "36e108e0b1fa2d17491cbaac4bc460dc0956029d10ccf83c913dd0e5db3e7f07",
+        "0.10.11": "cb7031283266d12f2d4bf30b624bc2b2fd21bbcc00863c9928e87dc5e1699d2e",
+        "0.10.12": "0f01e4a20f5dfa5278d7762b7bdb7cab96e24378b9eca3889fbd4b5e94dc7063",
+        "0.10.13": "368cb56b2740ebf4230520e2b90ebb0461e69034d85d1945febd9b3971426db2",
+        "0.10.14": "473cb319301d9d5978ce0d7c3d614e5a5ad3c674149fe45c3806dab38394b00e",
+        "0.10.15": "df0caae6b71d266b91b4a83111a61d2b94ed2e2bea024c532b933dcff867e58c",
+        "0.10.16": "0a0652d9a2609a968c14be1a9ea00bf4b1d64e2e1f53a1b51b6fff3a6e829273",
+        "0.10.2": "33738192795f6a9915ec1fc2a4cdd79894c0004aff7a156ddf87f6e6b6e6080d",
+        "0.10.3": "c71c50dd1f51884e1619f03270f077a8a09af93efa74d1735fbfb75012184344",
+        "0.10.4": "220407e5a263f110ec30a071787c9535918fdfc97def5680c90013c3f30c38c1",
+        "0.10.5": "43a15e3273b2133aaac0150478ab443fb89f15c3de41d8d93d8f3bb14bf560f6",
+        "0.10.6": "a7a2876a571abcfb6fb9a2a2ecce822abb174455b6a69d91ad1810cd29549a06",
+        "0.10.7": "eb15973f070a7de8bf3f61261726ef09647741110af6062d5ca1e21e6c4bd013",
+        "0.10.8": "38368702037feddcb6470b4dc641adcc585373ab037c757bbc2818a21968d051",
+        "0.10.9": "94da93321c171e26481afeebe8288757b0501901b7c5492648163d8ec4942ec5",
+        "0.11.0": "b8590f308416a428dca05ca67020283105344e94059fd2f02cc72e9c913c30fb",
+        "0.11.1": "75f57d451deabf8ad8fa1488d27b24834c9f5b6ca996da8d0c9dc5ce9c8d4d34",
+        "0.11.10": "4844b207be8393981c5fcb61c9372d7c96432fcc8f5c3431a255a9d19b5c298b",
+        "0.11.11": "4aee35c6e7d3f7051be6f0a93ea9d03924ed0db7de0cd04a7d500bfaebf79c9c",
+        "0.11.12": "856a5eb897fbc26890ddf8760ad4bbfc6bd777233522d9c48379ca9563d40517",
+        "0.11.13": "7af072bf3403369fd4339d550a7612c94ce681a22ca3a5455e68983fa4b3648c",
+        "0.11.14": "f57f74deb81fb91b776012ed7605e96b1ffb88c4fd5c031ce5c90534b604a6e0",
+        "0.11.15": "4d6105c5eeb03068b10ff34475a0d166964f98e7b9777cc34b342a225af9b87c",
+        "0.11.16": "6a82c41828dd6f271f4d6ebc3f1db78239a4b2b3d355dfdb5f8bbf55f004463a",
+        "0.11.17": "7f4de6edd503089841ebfa88341e1c00fb19b6bf93d820d908db15960fd31226",
+        "0.11.18": "c4f9b276c87e3fc1902a8bdfcce264c3f7c8a1c35e5e0c946062739f55026664",
+        "0.11.19": "47659bb1cb7ef3cd7b4f9bd2a11349b8d92097d34f9597a3c09e9bcefaf92b61",
+        "0.11.2": "641abc3e3fcf0de41165595f801376e01106bca1fd876dda937730e477ca004c",
+        "0.11.20": "1545100ac38f42f338c63bff290d7285b7117021a564b3c0f34e8d57cf81451f",
+        "0.11.21": "a3a77dea5dccbf32ba4e9ddd7d80a5a3bb3b9f1f3835e18daf5dbea6bee0efbf",
+        "0.11.22": "d595f999e90624f64d2c4bc74c72adb0f3e0f773dc5692ca91338363b3568fa0",
+        "0.11.23": "034d76a295c22987e79ad7a4d40d5822d83973a11e9d4c01553e5033c30cbbac",
+        "0.11.24": "df4dd5dae401458087396b6db7fabc4d6760aa456a5fa8e92bda549f39cae661",
+        "0.11.25": "549dbb86397490ce69d908425b9beebc85bbaad25157d67479d4995bb56fdf9a",
+        "0.11.26": "66b16eb6213713f3c72d0ed14ce56423ae84dced8df73d2a2c8675f0495ae7ea",
+        "0.11.27": "34a590ca09d341e94cddf8e5af0bbccde205d5fbc2fa3c09dd67c7f85cea59d7",
+        "0.11.3": "1f47408d705e02bc7c05bde891f3eb9338a8a40cdb6ad7d1e128c7f5e86bfdfd",
+        "0.11.4": "60aefca3b899717636625c8f9c5c7ca678936a4a7696a62c455a998f84dbbc91",
+        "0.11.5": "e52bfef983a36165f67746f6a4d7892dcc0445b2825e31bcffdb045372018d3e",
+        "0.11.6": "1b45eac8b696d59491b079bd04fcb0f3488c0f6ed62dcb36bcfea8a543e9cdc3",
+        "0.11.7": "4959ca95f55df4265bff2ad63066147255e6fa733682cf6d1cb5eaff6e53324b",
+        "0.11.8": "0d03ae910d2ac4c5ba6074a634003292a4dca70cbe602a6e1bddd47ac3dc87a1",
+        "0.11.9": "e0594792d2109069d0caffd176f674d770a84adf024c5bb48e686b1ee5ac7659",
+        "0.12.0": "7027c42a840763b8c0a7a80527cb17de0413ce7ced3043b50bbd1c3a06c0f1f8",
+        "0.12.1": "6416251e6672bff06fe96a3337570772845a44500fba2d178e2e55e0fab58a86",
+        "0.12.10": "529d00e4c998cced1a15ffd53bbe203917b39ed6071281c16184ab0014ca6ff3",
+        "0.12.11": "78d50abbd1790e0f4c74cb1d4a2211b439bac661d54107ad5564c55e77906762",
+        "0.12.12": "4aca412c241a2dd53af261efc7adf7736fdebd67dc0d1cc1ffdbcb9407e0e810",
+        "0.12.13": "95ffee0d1d30de4313fdaaa485891ce924991d45bbc18adfc8ac5b1639e62fbb",
+        "0.12.14": "2f60ae467ef4fc5eba9a34d31648c9c8ed902faf45a217f6734ce9ea64779ac7",
+        "0.12.15": "5a4149341a6362e4d5c23a7cd96a3e964645642919b14c23b9102462a1ac685f",
+        "0.12.16": "0aeedb8ca5f0f96be00f84073c6d0d5f962ecad020ef543dff99a7c12717a60e",
+        "0.12.17": "c49a75385d35ff5e9202755f09beb0b878a05c4c363fcc52b23eeb5dcb6782cc",
+        "0.12.18": "8dd7729fc83d88353415f6816fd4bb00897aa47c7f1506b69060e74e6e3d8e8b",
+        "0.12.19": "f1ebec079129e43af5e234ef36ee3d7e6085687d145b7ea653b262d16c6b65f1",
+        "0.12.2": "ad39a4f15051ccd4ea6adf44df851e00fd9062c71734391d806246b94e69dc1f",
+        "0.12.20": "80eeda66c9ef8e18f5122fff2c54604c053420b11dae951cfb74cf1dcba2e93f",
+        "0.12.21": "6d6b1a3d01ac8035b8d2d94e0e5254eab82746f09046baed763751b00253232b",
+        "0.12.22": "622db8120387cf64e3159e57343233b5a37253176fcda7f8a7e48f5a9c4c98fd",
+        "0.12.23": "860faf61a9957c9cb0e23e69f1c8290e92f6eb660fcdd1f2d6777043a2ae1a46",
+        "0.12.24": "fdfa9b401ef6c4229745bb6e9b2529192d07b920eed624cdee2a82348cd550af",
+        "0.12.25": "7d5b6658b016965ae301fa995306db965c93677880ea70765a84235a96eae896",
+        "0.12.26": "3811a1fe10f3cc132124099150fabb15b22530bdbc3e15f35371335b91c4766a",
+        "0.12.27": "4f2777434f26af6e4ce4fdcdccd3bed9d861d11e87bcbe72c0f51ddaca8ff848",
+        "0.12.28": "e8e4606fed1c162e3a63d408c07584429f49a4f34c7176cb6cbee60e78f2372c",
+        "0.12.29": "e2cd6adf83b3347d36e271f030621a8cf95fd1fd0760546b9fc5a24a0f1447c7",
+        "0.12.3": "f31c3ce511142fac936539abd3315bdc303a6e501fac5b77e0824310d542d081",
+        "0.12.30": "40e7692b2009a70b1e9b362284add4d8b75880fefddb4acaa5e67194e843f219",
+        "0.12.31": "6481fff8269772d4463253ca83c788104a7305cb3fb9136bc651a6211e46e03f",
+        "0.12.32": "a64d71c1e77d39da024f06f5821ee00ad9c38febb90370bad1f07a94e0bc8793",
+        "0.12.33": "7cb44cbce9d8ee4fb36e4c0ad7b794ac44ebaad924b9c8291a63215bb44c2c8f",
+        "0.12.34": "898a87371a3999b2f731b9af636cd76aa20de10e69c2daf3e71388326b619fe0",
+        "0.12.35": "9dbe6ed1438e1f8ad955a4701e9a944938e9519f6888d12d8558b645e247d5f6",
+        "0.12.36": "5c843caf6296fc1f93444735205af9ed4e109a539005abb2564ae1d6fad34c52",
+        "0.12.4": "d93d6a2de9efd4edaaf10fd2c885860ca83c78abaabffefc075ca9a2c7a7d15f",
+        "0.12.5": "45547acdf52b4b191513d57ad6e2417d193bb011d8199657a2754b698d968612",
+        "0.12.6": "bd2dbf44d0eb8b32ac0cb7b0d75c31313554dd04d6f5dd1085e150ec5383d9b8",
+        "0.12.7": "c087746de95e20e4dabe86606c3a019964a8fde2d5f386152939063c116c5971",
+        "0.12.8": "035400578c621d699f64d7220363d0301da39ed54546b0c1df7ad71abf8268f4",
+        "0.12.9": "081289d17dce471c8cbc0e69a3dd073b627e08338561d1167ab620b754d9fe90",
+        "0.13.0": "31aca065a2f6049464bb9a37dd316e51d9b7f502469e0e02e18586931f0cfcdf",
+        "0.13.1": "8bf49cfb32edee45d890537d9057d1b02ed55f53b7b6a30bae83a38c9231749e",
+        "0.13.10": "8a6f157065790a3ed2f88679250419b5cdd96e714a0d65f7797fd337186e96bb",
+        "0.13.2": "fa1c527bbc634be72aa7ba31e4e4def9bbb020f5416916279b7c705cd838893e",
+        "0.13.3": "e7b15203263d1faa615f9337d79c1d37959439dc46c2b4faab33286fadc2a1c5",
+        "0.13.4": "ed6081100e960d9d74734659ffc9cc91daf1c0fc7aceb8eaa94ee1a3f5046f2e",
+        "0.13.5": "96816e1d921eca64d208a85aab4f7798455a8e34229ee5a88c935bdee1b78b14",
+        "0.13.6": "a6e7655b9594024ad0ee439f3b5a7299369dc2a3f459b47c696f9ff676f9aa1f",
+        "0.13.7": "3e68a8dd9716185d9e64ea473ea6ef63529252e3e27623295a0378a19665d5eb",
+        "0.13.8": "2f3afcfae8af5ad0576a31e768415edb627824129e8e5a29b8bfccb2f234e835",
+        "0.13.9": "f6ad767baac13b44d4529fcf58ba2cd0995e36e7b435bc5b039de6f47e880dbf",
+        "0.14.0": "1c39c905698013cfb0177f520d7604e6826bb6ca22266aa0a6159ec603eff1f1",
+        "0.14.1": "b7b980c7bc75203b968f06374cbde00bf1818e02e156b8e5b6ccf440fb53b6d0",
+        "0.14.10": "7728a72c4c7d72665fde02204bcbd93b247721025b222ef78606f14513e0fd03",
+        "0.14.11": "0b61cf2d1aebcf6e6352c97b81dc2244ca29194be1b276f5d8ad5c6330fffb11",
+        "0.14.12": "13f67199e765030fa08fe0bd581af683f0d5bc04ea09c2b1102012c5fb90e7fd",
+        "0.14.13": "15d1cfb9e4f68655fa04c01f59edb405b6074a0f7118ea881e5026e4a1cd8593",
+        "0.14.14": "2b91bb1f221b6ea1f1e4371216b70f40748774c2fb5971b450c07773fb92d26b",
+        "0.14.15": "436ec0091e4f20e655156a30a0df3770fe2900aa301e548e08446ec794b6953c",
+        "0.14.16": "b7ec3e62bdc98a2f0393a5048e4c30ef659440ea6e0e572965103e72bd836f55",
+        "0.14.17": "043f0e083e9901b6cc658a77d1eb86f4fc650bbb977a4337dd63192826aa85dd",
+        "0.14.18": "b26ae0a80afebe130861d90abf98e3814a4f28a4c6ffeb5ab8ebb2be311e0ef2",
+        "0.14.19": "42dc3c131584288d375f2d07f822b0cb012d8c6fb899a5b9fdb3cb7eb9b6004f",
+        "0.14.2": "12219dc884514cb4a6a03737f4413c0e01c23a1b059b0156004b23f1e19dccbe",
+        "0.14.20": "02c929dc5c39e335a03c405292728118860721b10190d98c2a0f0efd5baafbac",
+        "0.14.21": "41a2df176f359a22aee9c8657e674f7aa54e9ba48b512a798e5ca36a1f51065c",
+        "0.14.22": "abfba89e19b959ca163c7752ba59d737c1ceea53a5d31a149c805446fc958064",
+        "0.14.23": "034711faac9d2166cb1baf1a2fb0b60b1f277f8492fd72176c17f3515e1abd3c",
+        "0.14.24": "5e011372fa0b68db8350aa7a248930ecc7839bf46d8485577d69f117a75f164c",
+        "0.14.25": "cc5e554ff619822309ffd57d8734d77cd5ce6238bc956f037ea06c58238c9899",
+        "0.14.26": "ab302d72a6f11a3b910431ff93aae7e773078c769f0a3ef15fb9ec692ed147d4",
+        "0.14.27": "ffb1cfd654a8219eaef89881fdb3bb3b1cdc5fa75ded05d6933b2b382e395468",
+        "0.14.28": "bf96e135eb83a2a8ddf766e426a841d8ddd7449d5f00d34ea02b41d2f19eef80",
+        "0.14.29": "f361cde2f109281a220d4307746cdfd5ee3f410da58a70377762396775634b33",
+        "0.14.3": "5ee5fc98172988e4394a3094002a75125e8fb864a88318732e8b613ec5adbda3",
+        "0.14.30": "a152ddd61dfaec7273fe8419ab357f33aee0d914c5f4efbf0d96fa749eea5ec9",
+        "0.14.31": "8c08302e8fa335b151b788c775ff56e7a03ae64ff85c548ee820fecb70356e85",
+        "0.14.32": "41dfc780fdec9373c01bae43289ea34c972e40ee3c9f6b3c8801a35f35586ce7",
+        "0.14.4": "e8e946c2b1349055e0b72ae281b238baf1a3ea7307c7e9f9d64673bdd9c26ac7",
+        "0.14.5": "8bf09f61b52cfcf4c00de50df88ae423d6c02354e385a86341133b5338630ad1",
+        "0.14.6": "5f006b8784cfb01fe7aa9c46f5f5cd4cf5c85a8c612a0653ec97642979062665",
+        "0.14.7": "1e5f105c494081baa3bf9e200b279e27ec1623895cd504c7dbef8d0b080fcf54",
+        "0.14.8": "d3f71a7eea53a3f8257a7b4795373ff886397178cd634430ea94e12d7fe4fe34",
+        "0.14.9": "07d6baa1b441335f3ce5098ac421fb6547c46dda735ca1bc6d0153c838f9dd83",
+        "0.2.0": "6f18c2c15150073e9f5b2d1eb9b2ebf63e31e39c83879fafb3e43c4993bbdbfa",
+        "0.2.1": "ab58b2660353b43223cf8bf7ee10bd1c75d0c1963dcca239bdd4fb685b3bc528",
+        "0.3.0": "9b848b0f2f9bfe046f514e98127ea1e8c46bd53d0f23187cf0c28845663b3d1b",
+        "0.3.1": "031d5eeff486f7f77b66717589c0b47dd034e56ce96e2fa189e674c02e1e5817",
+        "0.3.10": "516be3ec1393640c6db3b5f3c1c577458c5c31a08ceb2e0cd035e5efd456c854",
+        "0.3.11": "8ace99e297dcb966657a526f32fa37c7000dfa44305684a902b9db0ce4de24cb",
+        "0.3.12": "ae1b5bcd948e174b31409f6fea2b7bb4ed9820da1445d836253b68c29fee110f",
+        "0.3.13": "04c50e40ccbcc434eaed9251a9438ac6ef33fa16a494ff076a241f75ede3f8f2",
+        "0.3.14": "042fb0579051d126dae7aaf8b0873f92cdcf4651e9432dbf147e60d12db5ac2f",
+        "0.3.15": "2dfd9c48a89d870c935f9137361ee1646b4a3b2458a996d372ba2a9ce463636e",
+        "0.3.16": "c610a0e37581481b5a6d7e2794cb07016b89a7820f7f5c688da734d33ef409e5",
+        "0.3.2": "6c006145467a082ccb9fdfdf9886aaf20194f9c43bd022b519d67b4a0ab7af49",
+        "0.3.3": "90c59d500e90fb460ae3e1985c1e1bbdc18c9d36a30aa47ac8e976de77b69928",
+        "0.3.4": "a4e82edf381b01e99e33396375e6a62cc39b2a43d6b091ebd5b305f1e41ab46c",
+        "0.3.5": "23dcb205a604033e8c19370f5808ca5d4c9c5b07439f4549e99c8201ace6974e",
+        "0.3.6": "2fa56c1242d65bd952fcc6bd77ee78ca9e2be9c4cfd19167285894400af25cba",
+        "0.3.7": "2b2a37b91424fc82e324b8dab61ea7809cc9be08afcec02455a243a4c016add4",
+        "0.3.8": "d771367eeed56c239a7f9f4f3c236737222d5954b34c9919b5c775b8e17a1670",
+        "0.3.9": "145106b444f78aa800446d760ba89156797ba616ff2281ea0f9d3d7cd06e7b43",
+        "0.4.0": "6d6579911553528994f2c99db6ae1cf5d71e3b8b2a618fbded55185bc8f3395d",
+        "0.5.0": "d6161ef42da70b47a067d221baefbe67b439a05abd2ba448be0ea17f7fae7df8",
+        "0.5.1": "74455aee4483854dcadba831c3e095e0fe19296130da33707aeff7bc03be2d00",
+        "0.5.2": "44d3d19d6fddca5bb908da9f10e905b27045ba359bbd7372b2949202be246b79",
+        "0.6.0": "2145d3be22eb29504edaab8c3f306751e0706be4b6b133e7d50b4f8a8d95f932",
+        "0.6.1": "f2b185c4e33e352b3befd9048261c7985f99f2f81f21b358fa711f3cc0655224",
+        "0.6.10": "5db76bc6be8a84bf5bf226c9ef9ef44417e7ac5971895f283853a55b838a0a36",
+        "0.6.11": "db2afec822e13ee0ac59d5bff13f0468d9288b90ded1d9a4afdecfd520e53b69",
+        "0.6.12": "ca8eb0b14ae8611040c3db9f3f49f6d6f312503caa0a302bc037f301f76ef574",
+        "0.6.13": "0787445c989b2eab008aa532b340a7993273417c69524288d3e7308c6d0d10aa",
+        "0.6.14": "f24e873f877b3c6cf7a21b60fd74abd6048d30ed077fe89bb0ae14652ebf503c",
+        "0.6.15": "422162b589613eb3d5381051e66d5f149bfa4146d9eead411cd3111d93a96168",
+        "0.6.16": "99f86de19a680224688020785c0b62a2dccace29719847b16f1a9b22c312827f",
+        "0.6.2": "6facaca594c9954777bff936ab822f3b5e3f82cf24e27c3040746cc5e2b09941",
+        "0.6.3": "ed605794510fecfd44d3540034480731de028501b63ce3626b135a8e18e7c591",
+        "0.6.4": "74c1bc882549ba0a13b9c3764d55e0fb230fea9118514d8908e788ae18e6d029",
+        "0.6.5": "cc44bd2c466dc80d335b35c7fc4e9749425d05b4cf6ade60c6fe74c0a476190a",
+        "0.6.6": "11ea7f5be4e30ecdb20f3bb8c83d819fc74e0288c68197d0ee828e9e7d7d7f85",
+        "0.6.7": "e659ab8ba633c894536a418b36dc145f132c294d5f2d8e992690c5abb4cdcf10",
+        "0.6.8": "f3f8feacacbe6ba96e81c4110fd1085007739c8113111a8ac92fedf67da5d30e",
+        "0.6.9": "8aa1c1a28e28ec1384743cef013f49e8878a5104e9244620e3c64cb92c6aaa37",
+        "0.7.0": "c18f7d86e578875f531431980a94055214f599969c41a4b7ae90635b16277dc7",
+        "0.7.1": "384207e64cf1e509e63d95e16ce0059927dbd509afb5369b59b6dbf5ed84e7bf",
+        "0.7.2": "fa426d9b72a11926b7dbc1667fa3dc81a58e0bb9a65e4944dea68ea8dc18da36",
+        "0.8.0": "77c79d64e2ddbe851c8158ba2a69b820e5039fe16c3d91ba90eb19719f31be54",
+        "0.8.1": "bb0f4d00bb781e559b6e66ae4b5479df0fdf9ab15949f52fa2f1f5de16d4cc07",
+        "0.9.0": "c71ef2ac45709d55394bfc79a88a09e577e3d879488cdd66930766c4a23ae82a",
+        "0.9.1": "5d7adf86095622993804f29321a8397a56078806274187085688434b378e29f9",
+        "0.9.10": "eb27e8a3e8f17ac43ffa41bbda9cf5ad3f9f13ef66fa4873409d4902310275f7",
+        "0.9.11": "edd47c66782933e546a32ae89ca3c49263b2ba9bc29f3a0d5c52fff48e0ac67c",
+        "0.9.12": "d7da01615e9402761faab442396821b57ecb5adb12ac51958561411a82cfdf66",
+        "0.9.13": "86ea0c0ff7e6ef09eff72234800ddb48b6263277936e7ecd6ecd3250345d705f",
+        "0.9.14": "bcb3fc65554155980167fb821d05c7c66177f92464976c0b676a19d9e03387a7",
+        "0.9.15": "eee860b737edab6dce878dc0c250613875616c8e1303fb8885c7d3135b8494c5",
+        "0.9.17": "c1925f6242cc3933f83c264ff732b898ab5e8c122f77b1f9aa61b2b2af261f56",
+        "0.9.18": "1b9bf64f730d6ee4b0528a5f0a316363da9d8104318731509d4ccc86248f82b3",
+        "0.9.2": "bee954c23b4bc8426b9c982ba296b11bf2e513d183f4e37a968ff5e6bea1bd7e",
+        "0.9.3": "f6e865248f8f81246d4d9abe4d9a0970f7353af9a9de5fa092b2b9bd37f15256",
+        "0.9.4": "1de4c43f31e70d9b944de88fc2f66854e6b33d296948dcf0e6b039a7f4507651",
+        "0.9.5": "d59f87199a197ce03c5c13ab7c515b296bc7d54d70a5fea5e92b4ee90e7fac04",
+        "0.9.6": "09b4641a187f68b9f417b5aaf0af85cd89e549f5ab9ec5314aeddcf5eb2d8cc2",
+        "0.9.7": "e7007ac7992a1fec4cc3a486888e8280b7b87bc8cc548a74a8634ecac1f70871",
+        "0.9.8": "7a3d87be6485a8542d9acd96045f40b499e8088810f04154138ca9d14030060b",
+        "0.9.9": "fc5e7b07bb51a58a5f4c0831d85d461a62334a71d0080cb4685848217ea84688",
+        "1.0.0": "24590385be94998c5def4cf53d34edc5381144c805126f00efb954d986f9a7b2",
+        "1.0.1": "403f9214f3e703236b221f1a9cd88ec8b4adfa5296de01ab96216361f4692f56",
+        "1.1.0": "fb5aa53871fc917b1a9ed87b683a5d86db645e23acb32c2e0785a353e522fb75",
+        "1.10.0": "eb92f162bf56536459fc83c79b974bb12837acfed43d6bc370a7916d0ae15ecc",
+        "1.10.1": "55281c53a1894c864990125767da440a4e630446785086f52523b20033b74498",
+        "1.11.0": "d22053281f852e11534f5198498373cbb59295120a20771d90f7ed1897490a72",
+        "1.11.1": "27b501faa50e7a26c3d3560ca625132f4078a17771f4810baf70475ae48cbe43",
+        "1.12.0": "2c3e324da4c95177d6291d4c8730197c0d1822f8a9766814a4a44fa5ab797c9c",
+        "1.2.0": "186548d73ac615b32a73aafe38fb4f56c0d340e110e5a200bcadbaf2e199263a",
+        "1.3.0": "9f24ce812868d86d19daa79bf3bf9175bc44ea323391147a5e3abde2a283871b",
+        "1.3.1": "fe575dd17d0862a9a33781c8c4696a55c320909004a67a00fb286ba8b1bc496d",
+        "1.4.0": "c4fe55fb7a772d59a5ff1dfbff4fe0258d19b89fec4b233e75d35d5d2316badc",
+        "1.4.1": "50dfd22e0e76d0f662d429a5f80fcaf3855009297eab6a0a9f8543834744ba05",
+        "1.5.0": "bbbff0a806a4728c99295b254c8838933b5b082d75e3cb70c8dab21fdfbcfa9a",
+        "1.5.1": "97818827ef4f364230e16705d4706e2897df2bb60617d6ca15d598025a3c481f",
+        "1.5.2": "256fb8d4bd6413123cc9d91832d78325c48ff41677595be797d90f42969beae0",
+        "1.6.0": "cc2b571658e38e0c01b1fdca3bbbe93c00d3d71693ff2770043f8c29bc7d6f80",
+        "1.7.0": "eb3aa54a13a0dfe7fbe3a59e0c76093041720fdc77b110cc0fc260fafb4dc51e",
+        "1.8.0": "1744436df46f0bde35af3eda22aeaba453aada65d8f1c171cd8a5f59030bd69f",
+        "1.8.1": "2ab2d4f250c3d7b1c9fcdff1cece94ea4e2dfbec68614f7b87cb205f24ca9d11",
+        "1.9.0": "6299f016b246a94207e63da54dbe807655bf9e00044f73ded42c3ac5305fbcca"
+      },
+      "excluded_missing_path": [
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.3"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.4"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.5"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.6"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.7"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.8"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.9"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.10"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.11"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.12"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.13"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.14"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.15"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.16"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.17"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.18"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.19"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.20"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.0.21"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.3"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.4"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.5"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.6"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.7"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.8"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.9"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.10"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.11"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.12"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.1.13"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.2.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.2.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.3"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.4"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.5"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.6"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.7"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.8"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.9"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.10"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.11"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.12"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.13"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.14"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.15"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.3.16"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.4.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.5.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.5.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.5.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.3"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.4"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.5"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.6"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.7"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.8"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.9"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.10"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.11"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.12"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.13"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.14"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.15"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.6.16"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.7.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.7.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.7.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.8.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.8.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.3"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.4"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.5"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.6"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.7"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.8"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.9"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.10"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.11"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.12"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.13"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.14"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.15"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.17"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.9.18"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.3"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.4"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.5"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.6"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.7"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.8"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.9"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.10"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.11"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.12"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.13"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.3"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.4"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.5"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.6"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.7"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.8"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.9"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.10"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.11"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.12"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.13"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.14"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.15"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.16"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.17"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.18"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.19"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.20"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.21"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.11.22"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "0.11.23"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "0.11.24"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "0.11.25"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "0.11.26"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "0.11.27"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.0"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.1"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.2"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.3"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.4"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.5"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.6"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.7"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.8"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.9"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/connect/dns.rs",
+            "src/client/connect/http.rs"
+          ],
+          "version": "0.12.10"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.11"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.12"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.14"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.15"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.13"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.14"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.15"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.16"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.17"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.18"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.19"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.20"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.21"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.22"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.23"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.24"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.25"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.26"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.27"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs"
+          ],
+          "version": "0.10.16"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.28"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.29"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.30"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.31"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.32"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.33"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.34"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.35"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs"
+          ],
+          "version": "0.13.0"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs"
+          ],
+          "version": "0.13.1"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs"
+          ],
+          "version": "0.13.2"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs"
+          ],
+          "version": "0.13.3"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs"
+          ],
+          "version": "0.13.4"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs"
+          ],
+          "version": "0.13.5"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs"
+          ],
+          "version": "0.13.6"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs"
+          ],
+          "version": "0.13.7"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs"
+          ],
+          "version": "0.13.8"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs"
+          ],
+          "version": "0.13.9"
+        },
+        {
+          "missing": [
+            "src/client/client.rs"
+          ],
+          "version": "0.14.0"
+        },
+        {
+          "missing": [
+            "src/client/client.rs"
+          ],
+          "version": "0.14.1"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/client/client.rs"
+          ],
+          "version": "0.13.10"
+        },
+        {
+          "missing": [
+            "src/body/length.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/proto/h2/ping.rs",
+            "src/service/oneshot.rs"
+          ],
+          "version": "0.12.36"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.0.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.0.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.1.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.2.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.3.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.3.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.4.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.4.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.5.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.5.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.5.2"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.6.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.7.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.8.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.8.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.9.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.10.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.10.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.11.0"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.11.1"
+        },
+        {
+          "missing": [
+            "src/body/body.rs",
+            "src/body/to_bytes.rs",
+            "src/client/client.rs",
+            "src/client/conn.rs",
+            "src/client/connect/dns.rs"
+          ],
+          "version": "1.12.0"
+        }
+      ],
+      "excluded_requirement": [],
+      "excluded_short_file": [
+        {
+          "too_short": [
+            "src/client/conn.rs:873>806",
+            "src/proto/h2/client.rs:367>300",
+            "src/proto/h2/ping.rs:526>516"
+          ],
+          "version": "0.14.2"
+        },
+        {
+          "too_short": [
+            "src/client/conn.rs:873>819",
+            "src/proto/h2/client.rs:367>307",
+            "src/proto/h2/ping.rs:526>516"
+          ],
+          "version": "0.14.3"
+        },
+        {
+          "too_short": [
+            "src/client/conn.rs:873>808",
+            "src/proto/h2/client.rs:367>307",
+            "src/proto/h2/ping.rs:526>516"
+          ],
+          "version": "0.14.4"
+        },
+        {
+          "too_short": [
+            "src/client/conn.rs:873>819",
+            "src/proto/h2/client.rs:367>307",
+            "src/proto/h2/ping.rs:526>516"
+          ],
+          "version": "0.14.5"
+        },
+        {
+          "too_short": [
+            "src/client/conn.rs:873>841",
+            "src/proto/h2/client.rs:367>307",
+            "src/proto/h2/ping.rs:526>516"
+          ],
+          "version": "0.14.6"
+        },
+        {
+          "too_short": [
+            "src/client/conn.rs:873>841",
+            "src/proto/h2/client.rs:367>307",
+            "src/proto/h2/ping.rs:526>516"
+          ],
+          "version": "0.14.7"
+        },
+        {
+          "too_short": [
+            "src/client/conn.rs:873>857"
+          ],
+          "version": "0.14.8"
+        }
+      ],
+      "panic_lines": 17,
+      "paths": 25,
+      "upstream": "hyper"
+    },
+    "hyper-tls-fork": {
+      "candidates": [
+        "0.5.0"
+      ],
+      "crate_sha256": {
+        "0.0.0": "3bf4a5be35ea3eb0fa7dcdc2968ef1c65c7c8968728107c64e9760b536244f35",
+        "0.1.0": "e6829541bb9b1716568b3cf353bbcf0566578874b0ffa147922eadc67c7aa3a6",
+        "0.1.1": "faea5efeea2b1cd9596a5d2792ff13de558cc2e578f32310b3ad2e8c35c349f3",
+        "0.1.2": "9c81fa95203e2a6087242c38691a0210f23e9f3f8f944350bd676522132e2985",
+        "0.1.3": "a5aa51f6ae9842239b0fac14af5f22123b8432b4cc774a44ff059fcba0f675ca",
+        "0.1.4": "ffb1bd5e518d3065840ab315dbbf44e4420e5f7d80e2cb93fa6ffffc50522378",
+        "0.2.0": "b220edc52ee36375afea455c0ad46ac3a76c1a9ad2ed117eaafb60e93a4a3c1e",
+        "0.2.1": "d5787cee312507c4d005405e75da2b3357b58c47e3f14cddfa5f05c98edf6f29",
+        "0.3.0": "caaee4dea92794a9e697038bd401e264307d1f22c883dbcb6f6618ba0d3b3bd3",
+        "0.3.1": "32cd73f14ad370d3b4d4b7dce08f69b81536c82e39fcc89731930fe5788cd661",
+        "0.3.2": "3a800d6aa50af4b5850b2b0f659625ce9504df908e9733b635720483be26174f",
+        "0.4.0": "ab58a31960b2f78c5c24cf255216789863754438a1e48849a956846f899e762e",
+        "0.4.1": "3adcd308402b9553630734e9c36b77a7e48b3821251ca2493e8cd596763aafaa",
+        "0.4.2": "594271ee478183d49c3668236c693647246520fa08b1f7c8e5942c92c22d4c0e",
+        "0.4.3": "d979acc56dcb5b8dddba3917601745e877576475aa046df3226eabdecef78eed",
+        "0.5.0": "d6183ddfa99b85da61a140bea0efc93fdf56ceaa041b37d553518030827f9905",
+        "0.6.0": "70206fc6890eaca9fde8a0bf71caa2ddfc9fe045ac9e5c70df101a7dbde866e0"
+      },
+      "excluded_missing_path": [
+        {
+          "missing": [
+            "src/client.rs"
+          ],
+          "version": "0.0.0"
+        }
+      ],
+      "excluded_requirement": [
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.1.0"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.1.1"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.1.2"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.1.3"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.2.0"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.2.1"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.3.0"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.1.4"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.3.1"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.3.2"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.4.0"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.4.1"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.4.2"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.4.3"
+        },
+        {
+          "requirements": {
+            "hyper": false
+          },
+          "version": "0.6.0"
+        }
+      ],
+      "excluded_short_file": [],
+      "panic_lines": 0,
+      "paths": 1,
+      "upstream": "hyper-tls"
+    }
+  },
+  "release": "94",
+  "sha256": "3b7179cd967d1b13b683e05debfc685ad4c750e918226402d5d575eff1c0459f"
+}

@@ -1,5 +1,5 @@
 PYTHON ?= python3
-.PHONY: setup pull fetch verify test reproduce doctor index extents provenance fork-id path-origin catalogue catalogue-check rea-install rea-doctor rea-mcp rea-smoke rea-mcp-check rea-native-smoke
+.PHONY: setup pull fetch verify test reproduce doctor index extents provenance fork-id path-origin override-versions catalogue catalogue-check rea-install rea-doctor rea-mcp rea-smoke rea-mcp-check rea-native-smoke
 setup:
 	./scripts/setup.sh
 pull:
@@ -32,6 +32,8 @@ path-origin:
 fork-id:
 	$(PYTHON) tools/git_fork_id.py --selftest
 	$(PYTHON) tools/git_fork_id.py --from-file research/work-items/RE-002/reth-url-candidates.txt --expect e231042ee7db3fb7 --output work/prov/reth-fork-id.json
+override-versions:
+	$(PYTHON) tools/override_versions.py --release 94 --output work/prov/override-versions-94.json
 catalogue:
 	$(PYTHON) tools/catalogue.py
 catalogue-check:

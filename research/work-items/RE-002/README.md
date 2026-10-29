@@ -7,9 +7,9 @@
   can1357 reference submodule `999556f6e0a474b8312db96ec3149e1c44e97c23`
 - Claim status: observation for every recorded string; the build plan is inference and stays unexecuted
 - Scope included: `.comment`, dynamic linkage, unwind imports, build root/user/cargo-home layout, path and git forks,
-  registry crates with versions, `rustc` library prefix, `--remap-path-prefix` evidence, a deterministic Linux
-  build plan for both targets. Excluded: any actual build, dependency edges, feature flags, `-C` options that
-  leave no trace, and the whole function/behavior comparison.
+  registry crates with versions, override version bounds from the embedded file list, `rustc` library prefix,
+  `--remap-path-prefix` evidence, a deterministic Linux build plan for both targets. Excluded: any actual build,
+  dependency edges, feature flags, `-C` options that leave no trace, and the whole function/behavior comparison.
 
 This packet covers one bounded slice of RE-002. It does not request a component gate.
 
@@ -21,6 +21,7 @@ make verify test catalogue-check
 make provenance        # tools/build_provenance.py --release 94 and --release 115
 make fork-id           # tools/git_fork_id.py over the candidate URLs, must print one hit
 make path-origin       # tools/path_origin.py, one origin row per embedded source path
+make override-versions # tools/override_versions.py, candidate upstream versions per path override (network)
 ```
 
 Host for this run: macOS 15 arm64, Python 3.9.6, no cargo/rustc/docker on PATH. The tool is stdlib-only and
@@ -39,7 +40,9 @@ canonicalizes the URL (`CanonicalUrl::new`), hashes it as a `str` with `StableSi
 0/0), finishes as `low * 3 + high` and writes the result little-endian. `--selftest` runs the hasher against the
 upstream 1-3 test vector, 64 lengths. `PathOriginTests` (8 cases) covers the origin classes, the version strip, the unmapped-override rejection and
 the collision row. `GitForkIdTests` (6 cases) pins five vector lengths, the canonicalization
-rules, the scp-style rejection and the observed suffix. `make test` runs 32 tests, all passing.
+rules, the scp-style rejection and the observed suffix. `OverrideVersionTests` (13 cases) covers the prefix
+strip, the presence filter, the line floor, the caret rules of the requirement filter and the alloy crate split.
+`make test` runs 53 tests, all passing.
 
 ## Evidence
 
@@ -168,10 +171,54 @@ same paths with the same content, and #115 needs the same `z_vendor` set, or the
 digest cannot match. A plain registry resolution reproduces neither. Which version each override declares is still
 unread, so a manifest-less rebuild can only copy the paths and hope the fork content matches the strings.
 
+## Override versions
+
+`make override-versions` (`tools/override_versions.py`) asks the reverse of the question the path names leave
+open. The directory name carries no version, but the image carries part of the override's file list, because
+every panic location is a `path:line` string. That list is a fingerprint of the tree that was compiled, so the
+tool walks the crates.io versions of the crate each override is mapped to and drops every version whose
+published tree cannot be it. Output: `override-versions-94.json`, byte-identical on rerun.
+
+Three filters, applied in order, each exclusion kept in the output with the path that caused it:
+
+1. **Presence.** A version is out when one recorded path is absent from its published tree.
+2. **Line floor.** A panic at `path:line` means the built file had at least that many lines, so a version whose
+   file is shorter is out. 17 floors apply to `hyper-fork`.
+3. **Requirement.** The crate's declared dependency on a crate the image already resolved must be satisfiable by
+   the versions the image actually contains. This is what removes the hyper 1.x line from `hyper-tls-fork`.
+
+Both alloy crates are then intersected, because they ship from one workspace and cannot hold different versions.
+
+Result, #94:
+
+| Override | Paths | Versions tested | Surviving |
+| --- | --- | --- | --- |
+| `bincode-fork` | 4 | 56 | `2.0.0`, `2.0.1` |
+| `hyper-fork` | 25 | 245 | `0.14.9` … `0.14.32` |
+| `hyper-tls-fork` | 1 | 17 | `0.5.0` |
+| `hyper-alloy-core-fork` `crates/primitives` | 2 | 79 | `0.8.4` … `0.8.26`, `1.0.0` … `1.7.3` |
+| `hyper-alloy-core-fork` `crates/sol-types` | 4 | 77 | same set after the pairing |
+
+Three of these narrow more than a major line. `bincode` 1.3.x is gone because `src/de/decoder.rs` does not exist
+before 2.0.0, which is the strongest evidence yet that the override is a 2.x tree. `hyper` loses 0.14.2 through
+0.14.8 on a single floor: the image panics at `src/client/conn.rs:873`, and 0.14.8 has 857 lines there. `hyper-tls`
+loses every version but 0.5.0, the only one whose hyper requirement the image's hyper 0.14.29 satisfies.
+
+`hyper-fork` stays a 24-version window, and the registry copy at 0.14.29 sits inside it. That the workspace pins
+0.14.29 in the registry and the override shadows that same version is the natural reading, but the binary does
+not prove the patch level, so the override stays a range.
+
+What this does not settle: an edit that keeps every file name and only adds lines is invisible to both filters,
+and the line floor assumes the fork did not add lines to the files that panic. The dependency filter only covers
+crates the image itself resolved. The index is live, so a deleted version would change the version list, though
+every tarball used is recorded by SHA-256 and cached under `work/prov/crates`. Prereleases are skipped. Network
+is required; the artifact itself is still never executed.
+
 ## Results and limitations
 
 Machine-readable: `build-94.json`, `build-115.json` (full SHA-256, comment list, layout, registry and git rows,
-unresolved list) and `sourcing-94.json`, `sourcing-115.json` (per-origin counts, crate matrix, collision rows).
+unresolved list), `sourcing-94.json`, `sourcing-115.json` (per-origin counts, crate matrix, collision rows) and
+`override-versions-94.json` (candidate and excluded versions per override, with the crate digests used).
 Counts above are exact for what the extractor sees; the registry list is a lower bound,
 because a crate appears only if one of its paths survives as a string. Crate versions come from path text and a
 stale directory can survive a version bump. No dependency edge, feature flag or build order is claimed. The
@@ -187,7 +234,8 @@ The reth dependency is therefore pinned to a public source: `https://github.com/
 `3212af2d85a54eb207661361ac9fe1d7de4b5b8e`. A build needs no private fork for it, only that revision. The four
 `*-fork` siblings are path overrides and leave no URL, so they stay unresolved.
 
-Next question: which packages the four override directories actually declare, and at which version. The path gives
-the directory name only, so `hyper-fork` could be a renamed package with any version. Until a manifest or a
-`Cargo.lock` from the build host surfaces, the mapping in `tools/path_origin.py` is an assumption with evidence
-behind it, not a read value.
+Next question: which package each override directory declares. The version is now bounded for all four (see
+Override versions), but the package name still comes from the directory name, so `hyper-fork` could be a renamed
+package at 0.14.29. A `Cargo.toml` or a `Cargo.lock` from the build host would turn the mapping into a read
+value; the feature flags and the `[patch]`/`[replace]` shape that produced both copies of `hyper` are still
+unread either way.
