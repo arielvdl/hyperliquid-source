@@ -1,9 +1,12 @@
 {
   "binary_sha256": "3b7179cd967d1b13b683e05debfc685ad4c750e918226402d5d575eff1c0459f",
+  "range_tsv_sha256": "34555642fd2fd8a891f51fd31a264c4ea2aa5a33b27336715352c4a156757574",
+  "analysis_state": "complete: every unwind entry decoded over the full executable sections; no range limit, no timeout",
   "unwind_entries": 121299,
   "unique_starts": 121299,
   "duplicate_starts": 0,
   "zero_length_ranges": 0,
+  "duplicate_fde_references": 0,
   "range_size_total": 69397415,
   "range_size_max": 67374,
   "starts_match_fde_initial_location": true,
@@ -11,7 +14,7 @@
     ".text": {
       "address": 20200576,
       "size": 70370352,
-      "functions": 121299,
+      "fde_entries": 121299,
       "covered_bytes": 69397415,
       "overlap_bytes": 0,
       "gap_count": 113154,
@@ -74,7 +77,7 @@
     ".init": {
       "address": 90570928,
       "size": 27,
-      "functions": 0,
+      "fde_entries": 0,
       "covered_bytes": 0,
       "overlap_bytes": 0,
       "gap_count": 1,
@@ -95,7 +98,7 @@
     ".fini": {
       "address": 90570956,
       "size": 13,
-      "functions": 0,
+      "fde_entries": 0,
       "covered_bytes": 0,
       "overlap_bytes": 0,
       "gap_count": 1,
@@ -116,7 +119,7 @@
     ".plt": {
       "address": 90570976,
       "size": 4464,
-      "functions": 0,
+      "fde_entries": 0,
       "covered_bytes": 0,
       "overlap_bytes": 0,
       "gap_count": 1,
@@ -189,11 +192,15 @@
   "gaps_reached_by_direct_calls": {
     ".plt": {
       "gaps_reached": 1,
-      "gap_bytes_reached": 4464
+      "gap_bytes_reached": 4464,
+      "non_padding_gaps_reached": 1,
+      "non_padding_gap_bytes_reached": 4464
     },
     ".text": {
       "gaps_reached": 82,
-      "gap_bytes_reached": 61876
+      "gap_bytes_reached": 61876,
+      "non_padding_gaps_reached": 3,
+      "non_padding_gap_bytes_reached": 60994
     }
   },
   "observations": [
@@ -201,7 +208,7 @@
     "Range ends are decoded address_range values, not next-index bounds.",
     "Duplicate starts and duplicate FDE references are counted, not merged.",
     "Gap regions have no unwind range; padding means every byte is 0x00, 0x90 or 0xcc.",
-    "Direct-call reach into a non-padding gap shows where the gap may hold code.",
+    "gaps_reached counts every gap; non_padding_gaps_reached is the code-like subset.",
     "E8 scanning is byte-based, so operand data inside code can produce false positives."
   ],
   "limitations": "Unwind ranges are not a complete function census. Assembly, PLT/init stubs and any code without FDEs are absent. Component ownership, symbol identity and reconstructed-source equivalence are not established."

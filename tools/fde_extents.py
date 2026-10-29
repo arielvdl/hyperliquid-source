@@ -250,7 +250,7 @@ def analyze(data):
     starts = [r['start'] for r in rows]
     if starts != sorted(starts):
         raise ValueError('Unwind index is not ordered')
-    return secs, rows
+    return secs, rows, {'duplicate_fde_references': duplicate_fde}
 
 
 def padding(data, secs, start, end):
@@ -279,7 +279,7 @@ def coverage(secs, rows, data):
         for gap in gaps:
             gap['padding'] = padding(data, secs, gap['start'], gap['end'])
         padding_gaps = [g for g in gaps if g['padding']]
-        report[section['name']] = {'address': low, 'size': section['size'], 'functions': len(found),
+        report[section['name']] = {'address': low, 'size': section['size'], 'fde_entries': len(found),
                                    'covered_bytes': covered, 'overlap_bytes': overlap,
                                    'gap_count': len(gaps), 'gap_bytes': sum(g['size'] for g in gaps),
                                    'padding_gap_count': len(padding_gaps),
@@ -313,6 +313,7 @@ def direct_targets(data, secs, rows):
             gaps.append((cursor, high))
     gaps.sort()
     gap_starts = [g[0] for g in gaps]
+    padding_flags = [padding(data, secs, start, end) for start, end in gaps]
     for section in (s for s in secs if s['flags'] & 4 and s['size']):
         blob = data[section['offset']:section['offset'] + section['size']]
         low, name = section['address'], section['name']
@@ -335,9 +336,13 @@ def direct_targets(data, secs, rows):
                 continue
             counts[holder['name']]['unclassified'] += 1
     report = {name: dict(row) for name, row in sorted(counts.items())}
-    reached = {name: {'gaps_reached': len(hits),
-                      'gap_bytes_reached': sum(gaps[i][1] - gaps[i][0] for i in hits)}
-               for name, hits in gap_hits.items()}
+    reached = {}
+    for name, hits in gap_hits.items():
+        code_hits = [i for i in hits if not padding_flags[i]]
+        reached[name] = {'gaps_reached': len(hits),
+                         'gap_bytes_reached': sum(gaps[i][1] - gaps[i][0] for i in hits),
+                         'non_padding_gaps_reached': len(code_hits),
+                         'non_padding_gap_bytes_reached': sum(gaps[i][1] - gaps[i][0] for i in code_hits)}
     totals = collections.Counter()
     for row in report.values():
         totals.update(row)
@@ -405,9 +410,10 @@ def entrypoints(data, secs, rows):
 
 def generate(binary, prefix):
     data = binary.read_bytes() if hasattr(binary, 'read_bytes') else bytes(binary)
-    secs, rows = analyze(data)
+    secs, rows, extra = analyze(data)
     prefix.parent.mkdir(parents=True, exist_ok=True)
-    with prefix.with_suffix('.tsv').open('w', newline='') as handle:
+    tsv = prefix.with_suffix('.tsv')
+    with tsv.open('w', newline='') as handle:
         writer = csv.writer(handle, delimiter='\t', lineterminator='\n')
         writer.writerow(['index', 'start_va', 'end_va', 'size', 'fde_va', 'section', 'fde_encoding'])
         for row in rows:
@@ -417,10 +423,13 @@ def generate(binary, prefix):
     sections_report = coverage(secs, rows, data)
     summary = {
         'binary_sha256': hashlib.sha256(data).hexdigest(),
+        'range_tsv_sha256': hashlib.sha256(tsv.read_bytes()).hexdigest(),
+        'analysis_state': 'complete: every unwind entry decoded over the full executable sections; no range limit, no timeout',
         'unwind_entries': len(rows),
         'unique_starts': len({r['start'] for r in rows}),
         'duplicate_starts': len(rows) - len({r['start'] for r in rows}),
         'zero_length_ranges': sum(r['span'] == 0 for r in rows),
+        'duplicate_fde_references': extra['duplicate_fde_references'],
         'range_size_total': sum(r['span'] for r in rows),
         'range_size_max': max(r['span'] for r in rows),
         'starts_match_fde_initial_location': True,
@@ -433,7 +442,7 @@ def generate(binary, prefix):
             'Range ends are decoded address_range values, not next-index bounds.',
             'Duplicate starts and duplicate FDE references are counted, not merged.',
             'Gap regions have no unwind range; padding means every byte is 0x00, 0x90 or 0xcc.',
-            'Direct-call reach into a non-padding gap shows where the gap may hold code.',
+            'gaps_reached counts every gap; non_padding_gaps_reached is the code-like subset.',
             'E8 scanning is byte-based, so operand data inside code can produce false positives.',
         ],
         'limitations': 'Unwind ranges are not a complete function census. Assembly, PLT/init stubs and any code without FDEs are absent. Component ownership, symbol identity and reconstructed-source equivalence are not established.',

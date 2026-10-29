@@ -37,7 +37,8 @@ rejected, duplicate start counted rather than merged, relocated `DT_INIT_ARRAY` 
 
 Coordinates are linked VAs as stored in `.eh_frame_hdr`; the ELF is a PIE and no loader rebase is applied.
 
-- #94: 121,299 table entries decode to 121,299 FDEs. 0 duplicate starts, 0 duplicate FDE references,
+- #94: 121,299 table entries decode to 121,299 FDEs. 0 duplicate starts, 0 duplicate FDE references
+  (`duplicate_fde_references`),
   0 zero-length ranges, 0 start/`initial_location` disagreements. Every start lies in `.text`.
 - Range total 69,397,415 B of 70,370,352 B `.text` (98.62%), 0 overlapping bytes. 113,154 gaps hold the
   remaining 972,937 B. 113,024 gaps (907,363 B) are pure `00`/`90`/`cc` padding; 130 gaps (65,574 B)
@@ -45,15 +46,17 @@ Coordinates are linked VAs as stored in `.eh_frame_hdr`; the ELF is a PIE and no
 - The two largest non-padding gaps start with `endbr64` after a short `cc` run: `0x54a54dd` (60,675 B) and
   `0x5631543` (2,493 B). They read as hand-written assembly, not padding.
 - Direct `E8` targets inside `.text`: 483,120 land exactly on a start, 7,671 inside a range, 108 in a
-  non-padding gap interior, 8 on a gap start. 82 gaps are reached (61,876 B), so most non-padding gaps are
-  call-reachable. 106,111 further targets land in `.plt` stubs and 102,044 outside any executable section.
+  non-padding gap interior, 8 on a gap start. 116 targets reach 82 distinct gaps (61,876 B), but only 3 of
+  those gaps are non-padding (60,994 B): reach concentrates in the two large assembly regions, not across
+  the 130. 106,111 further targets land in `.plt` stubs and 102,044 outside any executable section.
 - Entry points: `e_entry = 0x1343c80` is a start and `.text` begins there. `DT_INIT = 0x56600b0` is in
   `.init`, which has no FDE, as expected. All 168 `DT_INIT_ARRAY` slots are `R_X86_64_RELATIVE`-relocated;
   167 resolve to a start. The exception `0x1343d60` and `DT_FINI_ARRAY[0] = 0x1343d20` both sit in the
   195 B assembly gap at `0x1343ca6` directly after `_start`; that gap also holds the first non-start
   call target, `0x1343cb0`.
 - #115, same tool and checks: 135,313 entries, 0 duplicates, 0 zero-length, 82,661,417 B of 83,719,936 B
-  (98.74%), 126,648 padding gaps (992,583 B), 127 non-padding gaps (65,936 B), 151 gaps reached (62,868 B).
+  (98.74%), 126,648 padding gaps (992,583 B), 127 non-padding gaps (65,936 B), 151 targets reaching 3
+  non-padding gaps (61,393 B).
   `e_entry = 0x1419320` is a start; 167/168 `DT_INIT_ARRAY` slots resolve to a start; the exception
   `0x14193e0` and `DT_FINI_ARRAY[0] = 0x14193a0` sit in the 202 B gap at `0x1419326`, whose first
   call target is `0x1419330`.
@@ -68,8 +71,11 @@ normalization mask, and no matched-body count is claimed.
 
 ## Results and limitations
 
-Machine-readable: `node-94-fde.json`, `node-115-fde.json` (full digests inside). Denominators are the
-`.text` sizes above; duplicates and gaps are counted against every entry, not sampled.
+Machine-readable: `node-94-fde.json`, `node-115-fde.json`. Each summary carries the binary digest, the
+`range_tsv_sha256` of the regenerated TSV and `analysis_state`; the analysis ran to completion over both
+full `.text` sections, with no timeout and no range limit. Denominators are the `.text` sizes above;
+duplicates and gaps are counted against every entry, not sampled. Section counts are named `fde_entries`
+rather than `functions`: they are unwind entries, not a function census.
 
 Unknowns: unwind ranges are compiler-emitted metadata, not proof of a function body or of one function per
 entry. `E8` scanning is byte-based, so an `0xe8` byte inside an immediate produces a candidate; the

@@ -103,7 +103,7 @@ def extent_fixture():
     data[64:64 + len(names)] = names
     text, hdr, frame, rela, dynamic, array = TEXT, HDR, 0x3000, 0x4000, 0x5000, 0x6000
     rows = [(0, 0, 0, 0, 0, 0), (1, 3, 0, 0, 64, len(names)),
-            (names.index(b'.text'), 1, 6, text, 256, 32),
+            (names.index(b'.text'), 1, 6, text, 256, 40),
             (names.index(b'.eh_frame_hdr'), 1, 2, hdr, 384, 28),
             (names.index(b'.eh_frame\0'), 1, 2, frame, 512, 96),
             (names.index(b'.rela.dyn'), 1, 2, rela, 768, 24),
@@ -113,15 +113,16 @@ def extent_fixture():
         struct.pack_into('<IIQQQQIIQQ', data, 1024 + index * 64, *row, 0, 0, 1, 0)
     data[256:264] = bytes([0x90] * 8)
     data[264:272] = bytes([0xcc] * 8)
-    data[272:280] = b'\xe8\x00\x00\x00\x00\x90\x90\x90'
-    data[280:288] = b'\x0f\x1f\x44\x00\x00\x90\x90\x90'
+    data[272:283] = b'\xe8\x00\x00\x00\x00\xe8\x06\x00\x00\x00\x90'
+    data[283:288] = bytes([0x90] * 5)
+    data[288:296] = b'\x0f\x1f\x44\x00\x00\x90\x90\x90'
     struct.pack_into('<i', data, 273, text - (text + 16 + 5))
     # CIE with zR and pcrel|sdata4, then two FDEs pointing at it.
     cie = b'\x10\0\0\0\0\0\0\0\x01zR\0\x01\x78\x10\x01\x1b\0\0\0'
     data[512:512 + len(cie)] = cie
-    for slot, start in ((20, text), (40, text + 16)):
+    for slot, start, span in ((20, text, 8), (40, text + 16, 16)):
         field = frame + slot + 8
-        struct.pack_into('<IIiiI', data, 512 + slot, 16, slot + 4, start - field, 8, 0)
+        struct.pack_into('<IIiiI', data, 512 + slot, 16, slot + 4, start - field, span, 0)
     data[384:388] = bytes([1, 0x1b, 3, 0x3b])
     struct.pack_into('<Iii', data, 392, 2, text - hdr, (frame + 20) - hdr)
     struct.pack_into('<ii', data, 404, (text + 16) - hdr, (frame + 40) - hdr)
@@ -139,6 +140,11 @@ class FdeExtentTests(unittest.TestCase):
         self.assertEqual(summary['sections']['.text']['padding_gap_bytes'], 8)
         self.assertEqual(summary['sections']['.text']['non_padding_gap_bytes'], 8)
         self.assertEqual(summary['direct_e8_call_targets']['by_section']['.text']['fde_start'], 1)
+        self.assertEqual(summary['gaps_reached_by_direct_calls']['.text']['non_padding_gaps_reached'], 1)
+        self.assertEqual(summary['duplicate_fde_references'], 0)
+        self.assertEqual(summary['sections']['.text']['fde_entries'], 2)
+        self.assertEqual(len(summary['range_tsv_sha256']), 64)
+        self.assertTrue(summary['analysis_state'].startswith('complete'))
 
     def test_start_disagreeing_with_fde_rejected(self):
         data = extent_fixture()
