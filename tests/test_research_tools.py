@@ -9,6 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 from build_provenance import analyze as analyze_provenance
 from catalogue import owner, validate_progress
 from elf_index import entry_file_offset, sections, unwind_index
+from git_fork_id import canonicalize, short_hash, siphash13_128
 
 
 def fixture():
@@ -155,3 +156,34 @@ class ProvenanceTests(unittest.TestCase):
                   b'/home/ubuntu/other/code_Mainnet/base/src/b.rs\0')
         with self.assertRaises(ValueError):
             analyze_provenance(bytes(provenance_fixture(rodata=rodata)), '94', 'f' * 64)
+
+
+class GitForkIdTests(unittest.TestCase):
+    def test_matches_upstream_siphash_vector(self):
+        keys = (0x0706050403020100, 0x0F0E0D0C0B0A0908)
+        for length, expected in enumerate([
+                'e77ebcb22788a5befd62db6add303001',
+                'fc6f370460d3eda85e0573cc2b2ff063',
+                '75787f090569839b855bc9548c6aea95',
+                '6bc5ccfa1edcf79f4823187712ebd743',
+                '0c784e71ac2b285a9f8e92e78fbf2c25']):
+            low, high = siphash13_128(bytes(range(length)), *keys)
+            self.assertEqual((low.to_bytes(8, 'little') + high.to_bytes(8, 'little')).hex(), expected)
+
+    def test_reproduces_observed_checkout_suffix(self):
+        self.assertEqual(short_hash(canonicalize('https://github.com/paradigmxyz/reth')), 'e231042ee7db3fb7')
+
+    def test_canonicalizes_github_case_slash_and_suffix(self):
+        self.assertEqual(canonicalize('https://github.com/ParadigmXYZ/Reth.git/'),
+                         'https://github.com/paradigmxyz/reth')
+
+    def test_keeps_non_github_case(self):
+        self.assertEqual(canonicalize('https://gitlab.com/Owner/Repo'), 'https://gitlab.com/Owner/Repo')
+
+    def test_rejects_scp_style_source(self):
+        with self.assertRaises(ValueError):
+            canonicalize('git@github.com:paradigmxyz/reth.git')
+
+    def test_hash_depends_on_the_whole_path(self):
+        self.assertNotEqual(short_hash(canonicalize('https://github.com/paradigmxyz/reth')),
+                            short_hash(canonicalize('https://github.com/paradigmxyz/reth-fork')))

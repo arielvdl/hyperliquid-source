@@ -19,6 +19,7 @@ This packet covers one bounded slice of RE-002. It does not request a component 
 ./scripts/setup.sh
 make verify test catalogue-check
 make provenance        # tools/build_provenance.py --release 94 and --release 115
+make fork-id           # tools/git_fork_id.py over the candidate URLs, must print one hit
 ```
 
 Host for this run: macOS 15 arm64, Python 3.9.6, no cargo/rustc/docker on PATH. The tool is stdlib-only and
@@ -30,7 +31,13 @@ The extractor fails closed on: a non-ELF64-LE input, a missing or duplicated `.c
 than 4 KiB or not NUL-terminated, a truncated or unsorted section table, more than one build root, and more
 than 200 distinct rows for one pattern. Tests in `tests/test_research_tools.py` (`ProvenanceTests`, 6 cases,
 synthetic ELF) cover comment extraction, absolute paths preceded by unrelated rodata bytes, relative paths,
-the three malformed-comment rejections and the two-root rejection. `make test` runs 26 tests, all passing.
+the three malformed-comment rejections and the two-root rejection.
+
+`tools/git_fork_id.py` recomputes the cargo checkout suffix for a candidate URL instead of guessing it: cargo
+canonicalizes the URL (`CanonicalUrl::new`), hashes it as a `str` with `StableSipHasher128` (SipHash-1-3, keys
+0/0), finishes as `low * 3 + high` and writes the result little-endian. `--selftest` runs the hasher against the
+upstream 1-3 test vector, 64 lengths. `GitForkIdTests` (6 cases) pins five vector lengths, the canonicalization
+rules, the scp-style rejection and the observed suffix. `make test` runs 32 tests, all passing.
 
 ## Evidence
 
@@ -67,7 +74,11 @@ Layout, from panic-location paths (absolute count 732 on #94, 499 on #115):
   and four sibling path forks `hyper-fork`, `bincode-fork`, `hyper-alloy-core-fork` (crates `primitives`,
   `sol-types`), `hyper-tls-fork`.
 - One git fork: `reth-e231042ee7db3fb7` at revision `3212af2`, crates `chainspec`, `ethereum/evm`, `primitives`,
-  `rpc/rpc-eth-types`, `rpc/rpc-server-types`.
+  `rpc/rpc-eth-types`, `rpc/rpc-server-types`. The directory name is a hash, not a label, and it resolves:
+  `short_hash("https://github.com/paradigmxyz/reth")` is `e231042ee7db3fb7`, so the dependency is upstream reth,
+  not a fork. Confirmed twice, the second time outside cargo: `3212af2` exists in that repository as
+  `3212af2d85a54eb207661361ac9fe1d7de4b5b8e`, release 1.1.5, 2025-01-07. None of the 48 other candidate
+  owner/name pairs from `reth-url-candidates.txt` reproduce the suffix.
 - Registry `index.crates.io-1949cf8c6b5b557f`: 118 distinct crates, 809 references, versions included in the
   evidence file. Notable native-build crates: `rocksdb 0.21.0`, `blst 0.3.13`, `c-kzg 1.0.3`,
   `secp256k1-sys 0.10.0`, `bzip2-sys 0.1.11+1.0.8`, `openssl-sys 0.9.107`, `aurora-engine-modexp 1.1.0`.
@@ -136,5 +147,11 @@ file was post-processed. Weak, because nothing here proves it.
 
 No gate is requested: RE-002 also wants the crate graph, fork URLs and the executed two-build result.
 
-Next question: does the reth fork URL hash to `e231042ee7db3fb7` under cargo's `short_hash`, and can a candidate
-URL be confirmed before the build, so the git dependency is pinned to a source instead of a directory name?
+The reth dependency is therefore pinned to a public source: `https://github.com/paradigmxyz/reth` at
+`3212af2d85a54eb207661361ac9fe1d7de4b5b8e`. A build needs no private fork for it, only that revision. The four
+`*-fork` siblings are path overrides and leave no URL, so they stay unresolved.
+
+Next question: does the workspace still carry the crates.io `reth-*` graph that the four path overrides shadow, so
+that a build without them fails on the same versions the strings show, or do the overrides change the resolution
+set? The strings show the patched crate names (`primitives`, `sol-types`) under both the overrides and the git
+checkout, which is what a `[patch]` for a renamed package looks like, but no manifest survives to confirm it.
