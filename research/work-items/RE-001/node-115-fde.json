@@ -1,0 +1,208 @@
+{
+  "binary_sha256": "a6e2897cd051213d004802deca416e8eca62b7a8278fa39f249e98c3867b5301",
+  "unwind_entries": 135313,
+  "unique_starts": 135313,
+  "duplicate_starts": 0,
+  "zero_length_ranges": 0,
+  "range_size_total": 82661417,
+  "range_size_max": 77663,
+  "starts_match_fde_initial_location": true,
+  "sections": {
+    ".text": {
+      "address": 21074688,
+      "size": 83719936,
+      "functions": 135313,
+      "covered_bytes": 82661417,
+      "overlap_bytes": 0,
+      "gap_count": 126775,
+      "gap_bytes": 1058519,
+      "padding_gap_count": 126648,
+      "padding_gap_bytes": 992583,
+      "non_padding_gap_count": 127,
+      "non_padding_gap_bytes": 65936,
+      "largest_gaps": [
+        {
+          "start": 104047826,
+          "end": 104108896,
+          "size": 61070,
+          "padding": false
+        },
+        {
+          "start": 103696067,
+          "end": 103698560,
+          "size": 2493,
+          "padding": false
+        },
+        {
+          "start": 21074726,
+          "end": 21074928,
+          "size": 202,
+          "padding": false
+        },
+        {
+          "start": 104794455,
+          "end": 104794576,
+          "size": 121,
+          "padding": false
+        },
+        {
+          "start": 97648835,
+          "end": 97648896,
+          "size": 61,
+          "padding": true
+        },
+        {
+          "start": 103428163,
+          "end": 103428224,
+          "size": 61,
+          "padding": true
+        },
+        {
+          "start": 103439747,
+          "end": 103439808,
+          "size": 61,
+          "padding": true
+        },
+        {
+          "start": 103433737,
+          "end": 103433792,
+          "size": 55,
+          "padding": true
+        }
+      ]
+    },
+    ".init": {
+      "address": 104794624,
+      "size": 27,
+      "functions": 0,
+      "covered_bytes": 0,
+      "overlap_bytes": 0,
+      "gap_count": 1,
+      "gap_bytes": 27,
+      "padding_gap_count": 0,
+      "padding_gap_bytes": 0,
+      "non_padding_gap_count": 1,
+      "non_padding_gap_bytes": 27,
+      "largest_gaps": [
+        {
+          "start": 104794624,
+          "end": 104794651,
+          "size": 27,
+          "padding": false
+        }
+      ]
+    },
+    ".fini": {
+      "address": 104794652,
+      "size": 13,
+      "functions": 0,
+      "covered_bytes": 0,
+      "overlap_bytes": 0,
+      "gap_count": 1,
+      "gap_bytes": 13,
+      "padding_gap_count": 0,
+      "padding_gap_bytes": 0,
+      "non_padding_gap_count": 1,
+      "non_padding_gap_bytes": 13,
+      "largest_gaps": [
+        {
+          "start": 104794652,
+          "end": 104794665,
+          "size": 13,
+          "padding": false
+        }
+      ]
+    },
+    ".plt": {
+      "address": 104794672,
+      "size": 4464,
+      "functions": 0,
+      "covered_bytes": 0,
+      "overlap_bytes": 0,
+      "gap_count": 1,
+      "gap_bytes": 4464,
+      "padding_gap_count": 0,
+      "padding_gap_bytes": 0,
+      "non_padding_gap_count": 1,
+      "non_padding_gap_bytes": 4464,
+      "largest_gaps": [
+        {
+          "start": 104794672,
+          "end": 104799136,
+          "size": 4464,
+          "padding": false
+        }
+      ]
+    }
+  },
+  "entrypoints": {
+    "elf_entry": {
+      "address": 21074688,
+      "section": ".text",
+      "on_fde_start": true
+    },
+    "DT_INIT": {
+      "address": 104794624,
+      "section": ".init",
+      "on_fde_start": false
+    },
+    "DT_INIT_ARRAY": {
+      "address": 104806088,
+      "entries": 168,
+      "relocated_entries": 168,
+      "entries_on_fde_start": 167,
+      "entries_in_executable_section": 168,
+      "address_on_fde_start": false
+    },
+    "DT_FINI_ARRAY": {
+      "address": 104806080,
+      "entries": 1,
+      "relocated_entries": 1,
+      "entries_on_fde_start": 0,
+      "entries_in_executable_section": 1,
+      "address_on_fde_start": false
+    }
+  },
+  "direct_e8_call_targets": {
+    "by_section": {
+      ".plt": {
+        "gap_interior": 112107
+      },
+      ".text": {
+        "gap_interior": 157,
+        "fde_start": 545621,
+        "fde_interior": 11460,
+        "gap_start": 26
+      },
+      "outside_executable": {
+        "outside_executable": 131078
+      }
+    },
+    "totals": {
+      "gap_interior": 112264,
+      "fde_start": 545621,
+      "fde_interior": 11460,
+      "gap_start": 26,
+      "outside_executable": 131078
+    }
+  },
+  "gaps_reached_by_direct_calls": {
+    ".plt": {
+      "gaps_reached": 1,
+      "gap_bytes_reached": 4464
+    },
+    ".text": {
+      "gaps_reached": 151,
+      "gap_bytes_reached": 62868
+    }
+  },
+  "observations": [
+    "FDE initial_location equals the matching .eh_frame_hdr start for every entry.",
+    "Range ends are decoded address_range values, not next-index bounds.",
+    "Duplicate starts and duplicate FDE references are counted, not merged.",
+    "Gap regions have no unwind range; padding means every byte is 0x00, 0x90 or 0xcc.",
+    "Direct-call reach into a non-padding gap shows where the gap may hold code.",
+    "E8 scanning is byte-based, so operand data inside code can produce false positives."
+  ],
+  "limitations": "Unwind ranges are not a complete function census. Assembly, PLT/init stubs and any code without FDEs are absent. Component ownership, symbol identity and reconstructed-source equivalence are not established."
+}
