@@ -55,8 +55,8 @@ Coordinates are linked VAs as stored in `.eh_frame_hdr`; the ELF is a PIE and no
   195 B assembly gap at `0x1343ca6` directly after `_start`; that gap also holds the first non-start
   call target, `0x1343cb0`.
 - #115, same tool and checks: 135,313 entries, 0 duplicates, 0 zero-length, 82,661,417 B of 83,719,936 B
-  (98.74%), 126,648 padding gaps (992,583 B), 127 non-padding gaps (65,936 B), 151 targets reaching 3
-  non-padding gaps (61,393 B).
+  (98.74%), 126,648 padding gaps (992,583 B), 127 non-padding gaps (65,936 B), 183 targets reaching 151
+  distinct gaps, 3 of them non-padding (61,393 B).
   `e_entry = 0x1419320` is a start; 167/168 `DT_INIT_ARRAY` slots resolve to a start; the exception
   `0x14193e0` and `DT_FINI_ARRAY[0] = 0x14193a0` sit in the 202 B gap at `0x1419326`, whose first
   call target is `0x1419330`.
@@ -72,8 +72,11 @@ normalization mask, and no matched-body count is claimed.
 ## Results and limitations
 
 Machine-readable: `node-94-fde.json`, `node-115-fde.json`. Each summary carries the binary digest, the
-`range_tsv_sha256` of the regenerated TSV and `analysis_state`; the analysis ran to completion over both
-full `.text` sections, with no timeout and no range limit. Denominators are the `.text` sizes above;
+`range_tsv_sha256` of the regenerated TSV (the TSV itself is not committed, so the digest is a
+determinism check for anyone who regenerates it) and `analysis_state`. That state is a declared constant,
+not a measurement: it is true by construction, because `analyze` walks every table entry and raises if any
+one fails to resolve, and the section check rejects a range that leaves its section. The analysis ran over
+both full `.text` sections with no timeout and no range limit. Denominators are the `.text` sizes above;
 duplicates and gaps are counted against every entry, not sampled. Section counts are named `fde_entries`
 rather than `functions`: they are unwind entries, not a function census.
 
