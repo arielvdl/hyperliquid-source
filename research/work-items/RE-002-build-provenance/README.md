@@ -19,6 +19,7 @@ make verify                                   # hashes and signatures of the tar
 make provenance                               # writes provenance-{94,115,visor}.json here
 python3 tools/build_provenance.py --check     # exits 1 if a committed record is stale
 python3 tools/build_provenance.py --diff 94 115
+make path-origin                              # writes sourcing-{94,115}.json here
 ```
 
 `tools/build_provenance.py` refuses a target whose SHA-256 or size differs from `provenance/artifacts.json`. It reads the file and never runs it. One run over all three targets takes about 2 seconds.
@@ -104,6 +105,32 @@ Selected #94 versions (exact, from registry paths): `revm 19.2.0`, `revm-interpr
 
 The checkout directory hash `e231042ee7db3fb7` is Cargo's hash of the git URL, so it identifies the URL only for someone who already knows the URL.
 
+### Origin collisions
+
+`make path-origin` attributes every source path to one origin and reports any package reached from more than one
+(`tools/path_origin.py`, `sourcing-94.json`, `sourcing-115.json`, reruns byte-identical). Distinct paths only, so
+the totals here are lower than the raw occurrence counts above.
+
+#94, 670 paths: 453 registry (131 crates), 172 workspace, 25 `hyper-fork`, 9 git `reth@3212af2`, 6
+`hyper-alloy-core-fork`, 4 `bincode-fork`, 1 `hyper-tls-fork`.
+
+#115, 703 paths: 459 `z_vendor` (154 crates), 197 workspace-relative, 25 `z_forks/hyper-fork`, 12
+`z_forks/revm-precompile`, 4 `z_forks/bincode-fork`, 2 `z_forks/reth-rpc-eth-types`, and one each for
+`z_forks/reth-chainspec`, `z_forks/reth-ethereum-forks`, `z_forks/reth-rpc-server-types`, `z_forks/hyper-tls-fork`.
+
+Exactly one package is built from two origins, in both targets: `hyper`. #94 keeps the registry extract at
+`0.14.29` (15 paths) beside the fork (25 paths); #115 keeps a vendored `hyper` (20 paths) beside the fork. So the
+override is not a `[patch]` that displaces the registry copy — a patch leaves no registry extract behind — and both
+copies are compiled.
+
+Four crates in #94 exist only under an override and never in the registry: `bincode`, `hyper-tls`,
+`alloy-primitives`, `alloy-sol-types`. In #115 all four are vendored, and `bincode`/`hyper-tls` additionally keep
+their fork. No `reth-*` name appears in the #94 registry at all; that graph is the git checkout alone.
+
+For a rebuild: every origin listed above has to exist at the recorded path, or the paths change and the digest
+cannot match. The package a fork directory replaces is a name mapping, not a read value, and no base version of any
+fork is known yet.
+
 ## Implementation and comparison
 
 ### Inferred settings
@@ -141,6 +168,7 @@ This plan describes the build for anyone who has the source. It has not been run
 | `target_cpu_features` | Unconditional AVX or BMI use outside runtime-dispatched paths |
 | `frame_pointers` | A prologue survey over FDE-bounded functions |
 | `rustflags` | The original build config |
+| `fork_base_versions` | A manifest or lock from the build host; directory names carry no version |
 | `cargo_lock` | The original `Cargo.lock`. Paths give versions for #94 registry crates and only 18 of 131 vendored #115 directories |
 | `first_party_crate_versions` | First-party paths carry no versions |
 | `panic_strategy` (visor only) | Map LSDA owners to Rust functions |
@@ -153,8 +181,9 @@ Two more questions are open:
 ## Results and limitations
 
 - `tools/build_provenance.py --check` passes for all three targets at upstream `6fb8631`. `tests/test_build_provenance.py` regenerates each record from the verified target and compares it with the committed JSON. It also runs synthetic-ELF tests that need no LFS data.
+- `make path-origin` writes `sourcing-{94,115}.json`; the origin tests cover the mapping and the collision row, and regenerate both files from the verified targets.
 - Counts come from string scans over the whole file. An occurrence count is a count of matching byte strings, not of functions or call sites.
-- The tool parses path strings. A crate that leaves no panic location or path string in the binary is missing from these lists, so each list is a lower bound.
+- The tool parses path strings. A crate that leaves no panic location or path string in the binary is missing from these lists, so each list is a lower bound. The same holds for the origin matrix: a fork that leaves no path is invisible there, so the collision list is a lower bound too.
 - No progress gate is requested.
 
 Next question: which `profile.release` settings (opt level, LTO, and codegen units) reproduce the instruction patterns of one std function, inlined into hl-node #115, under rustc 1.95.0?

@@ -1,5 +1,5 @@
 PYTHON ?= python3
-.PHONY: setup pull fetch verify test reproduce doctor index catalogue catalogue-check provenance rea-install rea-doctor rea-mcp rea-smoke rea-mcp-check rea-native-smoke
+.PHONY: setup pull fetch verify test reproduce doctor index catalogue catalogue-check provenance path-origin rea-install rea-doctor rea-mcp rea-smoke rea-mcp-check rea-native-smoke
 setup:
 	./scripts/setup.sh
 pull:
@@ -15,6 +15,9 @@ test:
 	$(PYTHON) -m unittest discover -s tests -v
 provenance:
 	$(PYTHON) tools/build_provenance.py
+path-origin:
+	$(PYTHON) tools/path_origin.py --release 94
+	$(PYTHON) tools/path_origin.py --release 115
 reproduce:
 	$(PYTHON) tools/reproduce.py
 doctor:

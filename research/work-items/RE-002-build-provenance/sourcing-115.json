@@ -1,0 +1,497 @@
+{
+  "absolute_paths": 459,
+  "build_root": "/home/ubuntu/hl",
+  "collisions": [
+    {
+      "from_directory_name": true,
+      "origins": {
+        "override:z_forks/hyper-fork": 25,
+        "vendor": 20
+      },
+      "package": "hyper",
+      "shadowed": true
+    }
+  ],
+  "crates": {
+    "alloy-consensus": {
+      "vendor": 10
+    },
+    "alloy-eip2930": {
+      "vendor": 1
+    },
+    "alloy-eip7702": {
+      "vendor": 1
+    },
+    "alloy-eips": {
+      "vendor": 4
+    },
+    "alloy-evm": {
+      "vendor": 1
+    },
+    "alloy-primitives": {
+      "vendor": 1
+    },
+    "alloy-rlp": {
+      "vendor": 2
+    },
+    "alloy-rpc-types-eth": {
+      "vendor": 2
+    },
+    "alloy-sol-types": {
+      "vendor": 4
+    },
+    "alloy-trie": {
+      "vendor": 6
+    },
+    "anyhow": {
+      "vendor": 2
+    },
+    "arc-swap": {
+      "vendor": 3
+    },
+    "ark-bn254": {
+      "vendor": 2
+    },
+    "ark-ec": {
+      "vendor": 4
+    },
+    "ark-ff": {
+      "vendor": 5
+    },
+    "arrayvec": {
+      "vendor": 1
+    },
+    "aurora-engine-modexp": {
+      "vendor": 2
+    },
+    "axum": {
+      "vendor": 8
+    },
+    "axum-core": {
+      "vendor": 2
+    },
+    "axum-extra": {
+      "vendor": 1
+    },
+    "base": {
+      "relative": 33
+    },
+    "base64": {
+      "vendor": 2
+    },
+    "bincode": {
+      "override:z_forks/bincode-fork": 4
+    },
+    "bitvec": {
+      "vendor": 6
+    },
+    "blake3": {
+      "vendor": 7
+    },
+    "block-buffer": {
+      "vendor": 1
+    },
+    "blst": {
+      "vendor": 2
+    },
+    "bs58": {
+      "vendor": 1
+    },
+    "bytes": {
+      "vendor": 7
+    },
+    "bzip2-sys": {
+      "vendor": 1
+    },
+    "chrono": {
+      "vendor": 19
+    },
+    "clap": {
+      "vendor": 11
+    },
+    "clientz_forks": {
+      "relative": 2
+    },
+    "connmessagez_forks": {
+      "relative": 1
+    },
+    "connz_forks": {
+      "relative": 1
+    },
+    "const-hex": {
+      "vendor": 1
+    },
+    "const-oid": {
+      "vendor": 2
+    },
+    "crossbeam-deque": {
+      "vendor": 1
+    },
+    "crossbeam-epoch": {
+      "vendor": 4
+    },
+    "curve25519-dalek-ng": {
+      "vendor": 4
+    },
+    "db": {
+      "relative": 5
+    },
+    "decodez_forks": {
+      "relative": 1
+    },
+    "dispatchmessagez_forks": {
+      "relative": 2
+    },
+    "dnsmessagez_forks": {
+      "relative": 1
+    },
+    "encodez_forks": {
+      "relative": 1
+    },
+    "ethabi": {
+      "vendor": 1
+    },
+    "ethers-core": {
+      "vendor": 1
+    },
+    "evm_rpc": {
+      "relative": 6
+    },
+    "foldhash": {
+      "vendor": 1
+    },
+    "form_urlencoded": {
+      "vendor": 1
+    },
+    "futures-channel": {
+      "vendor": 3
+    },
+    "futures-core": {
+      "vendor": 1
+    },
+    "futures-util": {
+      "vendor": 8
+    },
+    "global_constants": {
+      "relative": 2
+    },
+    "h2": {
+      "vendor": 33
+    },
+    "hashbrown": {
+      "vendor": 2
+    },
+    "http": {
+      "vendor": 9
+    },
+    "httparse": {
+      "vendor": 2
+    },
+    "httpdate": {
+      "vendor": 1
+    },
+    "httpmessagez_forks": {
+      "relative": 1
+    },
+    "hyper": {
+      "override:z_forks/hyper-fork": 25,
+      "vendor": 20
+    },
+    "hyper-tls": {
+      "override:z_forks/hyper-tls-fork": 1
+    },
+    "iana-time-zone": {
+      "vendor": 1
+    },
+    "icu_collections": {
+      "vendor": 2
+    },
+    "icu_normalizer": {
+      "vendor": 1
+    },
+    "idna": {
+      "vendor": 2
+    },
+    "idna_adapter": {
+      "vendor": 1
+    },
+    "impl-serde": {
+      "vendor": 1
+    },
+    "indexmap": {
+      "vendor": 3
+    },
+    "info_server": {
+      "relative": 7
+    },
+    "iomessagebuf.lenz_forks": {
+      "relative": 1
+    },
+    "itertools": {
+      "vendor": 1
+    },
+    "itoa": {
+      "vendor": 1
+    },
+    "jsonrpsee-core": {
+      "vendor": 3
+    },
+    "jsonrpsee-types": {
+      "vendor": 1
+    },
+    "k256": {
+      "vendor": 3
+    },
+    "keccak-asm": {
+      "vendor": 1
+    },
+    "l1": {
+      "relative": 77
+    },
+    "lengthz_forks": {
+      "relative": 1
+    },
+    "log-mdc": {
+      "vendor": 1
+    },
+    "log4rs": {
+      "vendor": 7
+    },
+    "lru": {
+      "vendor": 1
+    },
+    "lz4_flex": {
+      "vendor": 3
+    },
+    "matchit": {
+      "vendor": 3
+    },
+    "memchr": {
+      "vendor": 2
+    },
+    "mime": {
+      "vendor": 2
+    },
+    "mio": {
+      "vendor": 1
+    },
+    "native-tls": {
+      "vendor": 1
+    },
+    "net_utils": {
+      "relative": 12
+    },
+    "node": {
+      "relative": 38
+    },
+    "num_cpus": {
+      "vendor": 1
+    },
+    "nybbles": {
+      "vendor": 1
+    },
+    "once_cell": {
+      "vendor": 2
+    },
+    "openssl": {
+      "vendor": 4
+    },
+    "openssl-sys": {
+      "vendor": 1
+    },
+    "parking_lot": {
+      "vendor": 2
+    },
+    "parking_lot_core": {
+      "vendor": 1
+    },
+    "percent-encoding": {
+      "vendor": 1
+    },
+    "pingmessagez_forks": {
+      "relative": 1
+    },
+    "poolz_forks": {
+      "relative": 1
+    },
+    "primitive-types": {
+      "vendor": 1
+    },
+    "rand": {
+      "vendor": 4
+    },
+    "rand_chacha": {
+      "vendor": 1
+    },
+    "rand_core": {
+      "vendor": 2
+    },
+    "rayon": {
+      "vendor": 8
+    },
+    "rayon-core": {
+      "vendor": 5
+    },
+    "reth-chainspec": {
+      "override:z_forks/reth-chainspec": 1
+    },
+    "reth-ethereum-forks": {
+      "override:z_forks/reth-ethereum-forks": 1
+    },
+    "reth-rpc-eth-types": {
+      "override:z_forks/reth-rpc-eth-types": 2
+    },
+    "reth-rpc-server-types": {
+      "override:z_forks/reth-rpc-server-types": 1
+    },
+    "revm-bytecode": {
+      "vendor": 2
+    },
+    "revm-context": {
+      "vendor": 3
+    },
+    "revm-context-interface": {
+      "vendor": 6
+    },
+    "revm-handler": {
+      "vendor": 3
+    },
+    "revm-inspector": {
+      "vendor": 2
+    },
+    "revm-interpreter": {
+      "vendor": 9
+    },
+    "revm-precompile": {
+      "override:z_forks/revm-precompile": 12
+    },
+    "revm-state": {
+      "vendor": 1
+    },
+    "ripemd": {
+      "vendor": 1
+    },
+    "rmp-serde": {
+      "vendor": 2
+    },
+    "rocksdb": {
+      "vendor": 3
+    },
+    "rolemessagez_forks": {
+      "relative": 1
+    },
+    "ruint": {
+      "vendor": 11
+    },
+    "rust_decimal": {
+      "vendor": 9
+    },
+    "rustc-hex": {
+      "vendor": 1
+    },
+    "sec1": {
+      "vendor": 1
+    },
+    "secp256k1": {
+      "vendor": 3
+    },
+    "secp256k1-sys": {
+      "vendor": 2
+    },
+    "serde": {
+      "vendor": 2
+    },
+    "serde_core": {
+      "vendor": 4
+    },
+    "serde_json": {
+      "vendor": 5
+    },
+    "serde_path_to_error": {
+      "vendor": 1
+    },
+    "sha2": {
+      "vendor": 3
+    },
+    "shlex": {
+      "vendor": 1
+    },
+    "signal-hook-registry": {
+      "vendor": 1
+    },
+    "slab": {
+      "vendor": 1
+    },
+    "smallvec": {
+      "vendor": 1
+    },
+    "socket2": {
+      "vendor": 3
+    },
+    "subtle": {
+      "vendor": 1
+    },
+    "sysinfo": {
+      "vendor": 7
+    },
+    "textwrap": {
+      "vendor": 2
+    },
+    "threadpool": {
+      "vendor": 1
+    },
+    "threadthread_spawn_forevertokio_spawn_foreverdiscriminantbase": {
+      "relative": 1
+    },
+    "tiny-keccak": {
+      "vendor": 1
+    },
+    "tokio": {
+      "vendor": 63
+    },
+    "tokio-native-tls": {
+      "vendor": 1
+    },
+    "tokio-util": {
+      "vendor": 2
+    },
+    "tower": {
+      "vendor": 1
+    },
+    "tracing-core": {
+      "vendor": 2
+    },
+    "unicode-width": {
+      "vendor": 2
+    },
+    "upgradez_forks": {
+      "relative": 1
+    },
+    "url": {
+      "vendor": 3
+    },
+    "want": {
+      "vendor": 1
+    },
+    "zmij": {
+      "vendor": 1
+    }
+  },
+  "origins": {
+    "override:z_forks/bincode-fork": 4,
+    "override:z_forks/hyper-fork": 25,
+    "override:z_forks/hyper-tls-fork": 1,
+    "override:z_forks/reth-chainspec": 1,
+    "override:z_forks/reth-ethereum-forks": 1,
+    "override:z_forks/reth-rpc-eth-types": 2,
+    "override:z_forks/reth-rpc-server-types": 1,
+    "override:z_forks/revm-precompile": 12,
+    "relative": 197,
+    "vendor": 459
+  },
+  "relative_paths": 244,
+  "sha256": "a6e2897cd051213d004802deca416e8eca62b7a8278fa39f249e98c3867b5301",
+  "sources": 703,
+  "target": "artifacts/node/115/hl-node",
+  "tool": "tools/path_origin.py"
+}
