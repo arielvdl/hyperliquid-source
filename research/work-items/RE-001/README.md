@@ -18,9 +18,12 @@ make verify test catalogue-check
 make extents            # tools/fde_extents.py --release 94 and --release 115
 ```
 
-Host for this run: macOS 15 arm64, Python 3.9.6, no LLVM/Ghidra on PATH. The tool is stdlib-only and
-static; it reads the verified artifact, never executes it. Outputs land in `work/fde/` (TSV ranges plus
-JSON summary). The two JSON summaries are retained beside this record; the TSVs are regenerable.
+Host for this run: macOS 15 arm64, Python 3.9.6, no LLVM/Ghidra on PATH. That is a different machine
+from the 2026-10-28 preflight recorded in `docs/REVERSE-ENGINEERING.md` (LLVM 22.1.4, Ghidra 12.1.4); the
+extent pass needs neither, only Python and the verified artifact. The tool is stdlib-only and static, so
+it reads the artifact and never executes it. Outputs land in `work/fde/` (TSV ranges plus JSON summary).
+The two JSON summaries are retained beside this record; each TSV is 6.3 MB (#94), regenerable with
+`make extents`, and therefore not committed.
 
 `tools/fde_extents.py` reuses `elf_index.sections` and fails closed on: a start that disagrees with the
 FDE `initial_location`, an FDE pointer outside `.eh_frame`, an unknown CIE, an unsupported CIE version or
