@@ -1,0 +1,423 @@
+{
+  "artifact": "artifacts/node/94/hl-node",
+  "build_root": "/home/ubuntu/hl",
+  "collisions": [
+    {
+      "origins": {
+        "override:hyper-fork": 41,
+        "registry": 25
+      },
+      "package": "hyper",
+      "shadowed": true
+    }
+  ],
+  "crates": {
+    "alloy-consensus": {
+      "registry": 9
+    },
+    "alloy-eip2930": {
+      "registry": 1
+    },
+    "alloy-eip7702": {
+      "registry": 1
+    },
+    "alloy-eips": {
+      "registry": 3
+    },
+    "alloy-primitives": {
+      "override:hyper-alloy-core-fork": 2
+    },
+    "alloy-rlp": {
+      "registry": 2
+    },
+    "alloy-sol-types": {
+      "override:hyper-alloy-core-fork": 4
+    },
+    "alloy-trie": {
+      "registry": 6
+    },
+    "anyhow": {
+      "registry": 2
+    },
+    "arc-swap": {
+      "registry": 3
+    },
+    "arrayvec": {
+      "registry": 1
+    },
+    "aurora-engine-modexp": {
+      "registry": 2
+    },
+    "axum": {
+      "registry": 8
+    },
+    "axum-core": {
+      "registry": 2
+    },
+    "axum-extra": {
+      "registry": 1
+    },
+    "base": {
+      "workspace": 39
+    },
+    "bincode": {
+      "override:bincode-fork": 4
+    },
+    "bitvec": {
+      "registry": 5
+    },
+    "blake3": {
+      "registry": 7
+    },
+    "block-buffer": {
+      "registry": 1
+    },
+    "blst": {
+      "registry": 2
+    },
+    "bs58": {
+      "registry": 1
+    },
+    "bytes": {
+      "registry": 7
+    },
+    "bzip2-sys": {
+      "registry": 1
+    },
+    "c-kzg": {
+      "registry": 1
+    },
+    "chrono": {
+      "registry": 20
+    },
+    "clap": {
+      "registry": 11
+    },
+    "const-hex": {
+      "registry": 1
+    },
+    "const-oid": {
+      "registry": 2
+    },
+    "crates/chainspec": {
+      "git:reth@3212af2": 1
+    },
+    "crates/ethereum/evm": {
+      "git:reth@3212af2": 2
+    },
+    "crates/primitives": {
+      "git:reth@3212af2": 2
+    },
+    "crates/rpc/rpc-eth-types": {
+      "git:reth@3212af2": 4
+    },
+    "crates/rpc/rpc-server-types": {
+      "git:reth@3212af2": 1
+    },
+    "crossbeam-deque": {
+      "registry": 1
+    },
+    "crossbeam-epoch": {
+      "registry": 4
+    },
+    "curve25519-dalek-ng": {
+      "registry": 4
+    },
+    "db": {
+      "workspace": 6
+    },
+    "ecdsa": {
+      "registry": 1
+    },
+    "ethabi": {
+      "registry": 1
+    },
+    "ethers-core": {
+      "registry": 1
+    },
+    "evm_rpc": {
+      "workspace": 6
+    },
+    "foldhash": {
+      "registry": 2
+    },
+    "form_urlencoded": {
+      "registry": 1
+    },
+    "futures-channel": {
+      "registry": 3
+    },
+    "futures-core": {
+      "registry": 1
+    },
+    "futures-util": {
+      "registry": 7
+    },
+    "global_constants": {
+      "workspace": 2
+    },
+    "h2": {
+      "registry": 56
+    },
+    "hashbrown": {
+      "registry": 2
+    },
+    "http": {
+      "registry": 9
+    },
+    "httparse": {
+      "registry": 2
+    },
+    "httpdate": {
+      "registry": 1
+    },
+    "hyper": {
+      "override:hyper-fork": 41,
+      "registry": 25
+    },
+    "hyper-tls": {
+      "override:hyper-tls-fork": 1
+    },
+    "iana-time-zone": {
+      "registry": 1
+    },
+    "icu_collections": {
+      "registry": 2
+    },
+    "icu_normalizer": {
+      "registry": 1
+    },
+    "idna": {
+      "registry": 2
+    },
+    "idna_adapter": {
+      "registry": 1
+    },
+    "impl-serde": {
+      "registry": 1
+    },
+    "indexmap": {
+      "registry": 4
+    },
+    "info_server": {
+      "workspace": 7
+    },
+    "itoa": {
+      "registry": 1
+    },
+    "jsonrpsee-core": {
+      "registry": 5
+    },
+    "jsonrpsee-types": {
+      "registry": 1
+    },
+    "k256": {
+      "registry": 3
+    },
+    "l1": {
+      "workspace": 70
+    },
+    "log-mdc": {
+      "registry": 1
+    },
+    "log4rs": {
+      "registry": 7
+    },
+    "lru": {
+      "registry": 1
+    },
+    "lz4_flex": {
+      "registry": 3
+    },
+    "matchit": {
+      "registry": 3
+    },
+    "mime": {
+      "registry": 2
+    },
+    "mio": {
+      "registry": 1
+    },
+    "native-tls": {
+      "registry": 1
+    },
+    "net_utils": {
+      "workspace": 13
+    },
+    "node": {
+      "workspace": 38
+    },
+    "num_cpus": {
+      "registry": 1
+    },
+    "once_cell": {
+      "registry": 2
+    },
+    "openssl": {
+      "registry": 4
+    },
+    "openssl-sys": {
+      "registry": 1
+    },
+    "parking_lot": {
+      "registry": 2
+    },
+    "parking_lot_core": {
+      "registry": 1
+    },
+    "percent-encoding": {
+      "registry": 1
+    },
+    "primitive-types": {
+      "registry": 1
+    },
+    "rand": {
+      "registry": 4
+    },
+    "rand_chacha": {
+      "registry": 1
+    },
+    "rand_core": {
+      "registry": 3
+    },
+    "rayon": {
+      "registry": 11
+    },
+    "rayon-core": {
+      "registry": 5
+    },
+    "revm": {
+      "registry": 7
+    },
+    "revm-interpreter": {
+      "registry": 14
+    },
+    "revm-precompile": {
+      "registry": 13
+    },
+    "revm-primitives": {
+      "registry": 7
+    },
+    "ripemd": {
+      "registry": 1
+    },
+    "rmp-serde": {
+      "registry": 2
+    },
+    "rocksdb": {
+      "registry": 3
+    },
+    "ruint": {
+      "registry": 12
+    },
+    "rust_decimal": {
+      "registry": 9
+    },
+    "rustc-hash": {
+      "registry": 1
+    },
+    "rustc-hex": {
+      "registry": 1
+    },
+    "ryu": {
+      "registry": 8
+    },
+    "sec1": {
+      "registry": 1
+    },
+    "secp256k1": {
+      "registry": 1
+    },
+    "secp256k1-sys": {
+      "registry": 1
+    },
+    "serde": {
+      "registry": 5
+    },
+    "serde_json": {
+      "registry": 5
+    },
+    "serde_path_to_error": {
+      "registry": 1
+    },
+    "sha2": {
+      "registry": 3
+    },
+    "shlex": {
+      "registry": 1
+    },
+    "signal-hook-registry": {
+      "registry": 1
+    },
+    "slab": {
+      "registry": 1
+    },
+    "smallvec": {
+      "registry": 1
+    },
+    "socket2": {
+      "registry": 2
+    },
+    "substrate-bn": {
+      "registry": 2
+    },
+    "subtle": {
+      "registry": 1
+    },
+    "sysinfo": {
+      "registry": 7
+    },
+    "textwrap": {
+      "registry": 2
+    },
+    "threadpool": {
+      "registry": 1
+    },
+    "tiny-keccak": {
+      "registry": 1
+    },
+    "tokio": {
+      "registry": 61
+    },
+    "tokio-metrics": {
+      "registry": 1
+    },
+    "tokio-native-tls": {
+      "registry": 1
+    },
+    "tokio-util": {
+      "registry": 2
+    },
+    "tower": {
+      "registry": 1
+    },
+    "tracing-core": {
+      "registry": 2
+    },
+    "unicode-width": {
+      "registry": 2
+    },
+    "url": {
+      "registry": 3
+    },
+    "want": {
+      "registry": 1
+    },
+    "wyz": {
+      "registry": 1
+    }
+  },
+  "origins": {
+    "git:reth@3212af2": 10,
+    "override:bincode-fork": 4,
+    "override:hyper-alloy-core-fork": 6,
+    "override:hyper-fork": 41,
+    "override:hyper-tls-fork": 1,
+    "registry": 489,
+    "workspace": 181
+  },
+  "packages": 131,
+  "release": "94",
+  "sha256": "3b7179cd967d1b13b683e05debfc685ad4c750e918226402d5d575eff1c0459f",
+  "sources": 732
+}

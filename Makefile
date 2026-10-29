@@ -1,5 +1,5 @@
 PYTHON ?= python3
-.PHONY: setup pull fetch verify test reproduce doctor index extents provenance fork-id catalogue catalogue-check rea-install rea-doctor rea-mcp rea-smoke rea-mcp-check rea-native-smoke
+.PHONY: setup pull fetch verify test reproduce doctor index extents provenance fork-id path-origin catalogue catalogue-check rea-install rea-doctor rea-mcp rea-smoke rea-mcp-check rea-native-smoke
 setup:
 	./scripts/setup.sh
 pull:
@@ -26,6 +26,9 @@ extents:
 provenance:
 	$(PYTHON) tools/build_provenance.py --release 94 --output work/prov/94.json
 	$(PYTHON) tools/build_provenance.py --release 115 --output work/prov/115.json
+path-origin:
+	$(PYTHON) tools/path_origin.py --release 94 --output work/prov/sourcing-94.json
+	$(PYTHON) tools/path_origin.py --release 115 --output work/prov/sourcing-115.json
 fork-id:
 	$(PYTHON) tools/git_fork_id.py --selftest
 	$(PYTHON) tools/git_fork_id.py --from-file research/work-items/RE-002/reth-url-candidates.txt --expect e231042ee7db3fb7 --output work/prov/reth-fork-id.json

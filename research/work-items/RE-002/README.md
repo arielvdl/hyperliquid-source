@@ -20,6 +20,7 @@ This packet covers one bounded slice of RE-002. It does not request a component 
 make verify test catalogue-check
 make provenance        # tools/build_provenance.py --release 94 and --release 115
 make fork-id           # tools/git_fork_id.py over the candidate URLs, must print one hit
+make path-origin       # tools/path_origin.py, one origin row per embedded source path
 ```
 
 Host for this run: macOS 15 arm64, Python 3.9.6, no cargo/rustc/docker on PATH. The tool is stdlib-only and
@@ -36,7 +37,8 @@ the three malformed-comment rejections and the two-root rejection.
 `tools/git_fork_id.py` recomputes the cargo checkout suffix for a candidate URL instead of guessing it: cargo
 canonicalizes the URL (`CanonicalUrl::new`), hashes it as a `str` with `StableSipHasher128` (SipHash-1-3, keys
 0/0), finishes as `low * 3 + high` and writes the result little-endian. `--selftest` runs the hasher against the
-upstream 1-3 test vector, 64 lengths. `GitForkIdTests` (6 cases) pins five vector lengths, the canonicalization
+upstream 1-3 test vector, 64 lengths. `PathOriginTests` (8 cases) covers the origin classes, the version strip, the unmapped-override rejection and
+the collision row. `GitForkIdTests` (6 cases) pins five vector lengths, the canonicalization
 rules, the scp-style rejection and the observed suffix. `make test` runs 32 tests, all passing.
 
 ## Evidence
@@ -133,10 +135,44 @@ while the build used `bincode-fork/src/` (`de/decoder.rs`, `de/impls.rs`, `enc/w
 no `hyper-fork`, `hyper-alloy-core-fork`, `hyper-tls-fork` and no manifests. Crate names match the workspace,
 directory names and internal layout do not, so the reference is a lead for identity, not a build source.
 
+## Dependency sourcing
+
+`make path-origin` classifies every embedded source path by where it came from and reports a crate that appears
+in more than one origin. It reads the same digest-checked artifact as `make provenance` and writes
+`sourcing-94.json` / `sourcing-115.json` here; reruns are byte-identical.
+
+#94, 732 absolute source paths:
+
+| Origin | Paths | Crates |
+| --- | --- | --- |
+| registry `index.crates.io-1949cf8c6b5b557f` | 489 | 114 |
+| workspace `code_Mainnet` | 181 | 9 members |
+| `hyper-fork` | 41 | `hyper` |
+| git checkout `reth@3212af2` | 10 | 5 crates |
+| `hyper-alloy-core-fork` | 6 | `alloy-primitives`, `alloy-sol-types` |
+| `bincode-fork` | 4 | `bincode` |
+| `hyper-tls-fork` | 1 | `hyper-tls` |
+
+One crate is built twice: `hyper` has 113 registry references at `0.14.29` and 41 from the override. So the
+override is not a `[patch]` that replaces the registry copy, which would have left no registry extract of it; both
+copies are compiled and both keep their own paths. Four crates are only ever seen under an override and never in
+the registry: `bincode`, `hyper-tls`, `alloy-primitives`, `alloy-sol-types`. No `reth-*` name appears in the
+registry at all, so the reth graph is entirely the git checkout, not a shadowed registry dependency.
+
+#115 is the opposite shape: all 499 paths sit under `code_Mainnet/z_vendor` (124 crates), with no registry extract,
+no git checkout and no `*-fork` directory. `hyper` appears once, vendored, with 149 references; `bincode` and
+`hyper-tls` are gone from the crate set entirely, and `alloy-primitives`/`alloy-sol-types` are vendored.
+
+What that means for a rebuild, stated as evidence and not as a flag: #94 needs the four overrides present at the
+same paths with the same content, and #115 needs the same `z_vendor` set, or the recorded paths change and the
+digest cannot match. A plain registry resolution reproduces neither. Which version each override declares is still
+unread, so a manifest-less rebuild can only copy the paths and hope the fork content matches the strings.
+
 ## Results and limitations
 
 Machine-readable: `build-94.json`, `build-115.json` (full SHA-256, comment list, layout, registry and git rows,
-unresolved list). Counts above are exact for what the extractor sees; the registry list is a lower bound,
+unresolved list) and `sourcing-94.json`, `sourcing-115.json` (per-origin counts, crate matrix, collision rows).
+Counts above are exact for what the extractor sees; the registry list is a lower bound,
 because a crate appears only if one of its paths survives as a string. Crate versions come from path text and a
 stale directory can survive a version bump. No dependency edge, feature flag or build order is claimed. The
 `z_vendor` crate set is not asserted complete either.
@@ -151,7 +187,7 @@ The reth dependency is therefore pinned to a public source: `https://github.com/
 `3212af2d85a54eb207661361ac9fe1d7de4b5b8e`. A build needs no private fork for it, only that revision. The four
 `*-fork` siblings are path overrides and leave no URL, so they stay unresolved.
 
-Next question: does the workspace still carry the crates.io `reth-*` graph that the four path overrides shadow, so
-that a build without them fails on the same versions the strings show, or do the overrides change the resolution
-set? The strings show the patched crate names (`primitives`, `sol-types`) under both the overrides and the git
-checkout, which is what a `[patch]` for a renamed package looks like, but no manifest survives to confirm it.
+Next question: which packages the four override directories actually declare, and at which version. The path gives
+the directory name only, so `hyper-fork` could be a renamed package with any version. Until a manifest or a
+`Cargo.lock` from the build host surfaces, the mapping in `tools/path_origin.py` is an assumption with evidence
+behind it, not a read value.

@@ -10,6 +10,7 @@ from build_provenance import analyze as analyze_provenance
 from catalogue import owner, validate_progress
 from elf_index import entry_file_offset, sections, unwind_index
 from git_fork_id import canonicalize, short_hash, siphash13_128
+from path_origin import Unmapped, classify, matrix
 
 
 def fixture():
@@ -187,3 +188,51 @@ class GitForkIdTests(unittest.TestCase):
     def test_hash_depends_on_the_whole_path(self):
         self.assertNotEqual(short_hash(canonicalize('https://github.com/paradigmxyz/reth')),
                             short_hash(canonicalize('https://github.com/paradigmxyz/reth-fork')))
+
+
+class PathOriginTests(unittest.TestCase):
+    root = '/home/ubuntu/hl'
+
+    def test_registry_row_keeps_the_package_and_drops_the_version(self):
+        path = '/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.120/src/value/ser.rs'
+        self.assertEqual(classify(path, self.root), ('registry', 'serde_json'))
+
+    def test_build_metadata_version_is_stripped_whole(self):
+        path = '/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bzip2-sys-0.1.11+1.0.8/src/lib.rs'
+        self.assertEqual(classify(path, self.root), ('registry', 'bzip2-sys'))
+
+    def test_git_checkout_reports_the_repo_and_revision(self):
+        path = '/home/ubuntu/.cargo/git/checkouts/reth-e231042ee7db3fb7/3212af2/crates/primitives/src/receipt.rs'
+        self.assertEqual(classify(path, self.root), ('git:reth@3212af2', 'crates/primitives'))
+
+    def test_override_directory_maps_to_the_replaced_package(self):
+        self.assertEqual(classify('/home/ubuntu/hl/bincode-fork/src/lib.rs', self.root),
+                         ('override:bincode-fork', 'bincode'))
+        self.assertEqual(classify('/home/ubuntu/hl/hyper-alloy-core-fork/crates/sol-types/src/utils.rs', self.root),
+                         ('override:hyper-alloy-core-fork', 'alloy-sol-types'))
+
+    def test_unmapped_override_directory_fails_closed(self):
+        with self.assertRaises(Unmapped):
+            classify('/home/ubuntu/hl/tokio-fork/src/lib.rs', self.root)
+        with self.assertRaises(Unmapped):
+            classify('/home/ubuntu/hl/hyper-alloy-core-fork/other/src/lib.rs', self.root)
+
+    def test_vendor_workspace_and_outside_paths(self):
+        self.assertEqual(classify('/home/ubuntu/hl/code_Mainnet/z_vendor/hashbrown-0.15.2/src/lib.rs', self.root),
+                         ('vendor', 'hashbrown'))
+        self.assertEqual(classify('/home/ubuntu/hl/code_Mainnet/base/src/a.rs', self.root),
+                         ('workspace', 'base'))
+        self.assertEqual(classify('/checkout/src/llvm-project/llvm/x.rs', self.root), ('outside', None))
+
+    def test_collision_marks_a_crate_built_from_two_origins(self):
+        paths = ['/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-0.14.29/src/lib.rs',
+                 '/home/ubuntu/hl/hyper-fork/src/lib.rs']
+        rows = matrix(paths, self.root)
+        self.assertEqual(len(rows['collisions']), 1)
+        self.assertEqual(rows['collisions'][0]['package'], 'hyper')
+        self.assertTrue(rows['collisions'][0]['shadowed'])
+
+    def test_single_origin_is_not_a_collision(self):
+        rows = matrix(['/home/ubuntu/hl/bincode-fork/src/lib.rs'], self.root)
+        self.assertEqual(rows['collisions'], [])
+        self.assertEqual(rows['crates']['bincode'], {'override:bincode-fork': 1})
