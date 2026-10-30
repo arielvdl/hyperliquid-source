@@ -28,10 +28,14 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_provenance import analyze, expected_digest, sha256, source_paths
-from path_origin import ALLOY_CORE_CRATES, OVERRIDE_PACKAGES
+from artifacts import check
+from build_provenance import TARGETS
+from path_origin import ALLOY_CORE_CRATES
 
 ROOT = Path(__file__).resolve().parents[1]
+SOURCE = re.compile(rb'(?<![\w./+-])(?:/home/[A-Za-z0-9_./+-]{3,140}\.rs|(?:\.\./)?[A-Za-z_][A-Za-z0-9_.+-]*(?:/[A-Za-z0-9_.+-]+)+\.rs)')
+BUILD_ROOT = re.compile(rb'(/home/[\w.-]+/hl/code_\w+)/')
+REGISTRY = re.compile(rb'\.cargo/registry/src/[^/\0]+/([A-Za-z0-9_][A-Za-z0-9_.-]*?)-(\d+\.\d+\.\d+[A-Za-z0-9.+-]*)/')
 CACHE = ROOT / 'work' / 'prov' / 'crates'
 INDEX = 'https://index.crates.io'
 STATIC = 'https://static.crates.io/crates'
@@ -58,6 +62,25 @@ UPSTREAM = {
         'sol-types': 'alloy-sol-types',
     },
 }
+
+
+def load(release):
+    """Verified bytes of one target plus the facts this tool needs from it."""
+    manifest = json.loads((ROOT / 'provenance/artifacts.json').read_text())
+    rel = TARGETS[release]
+    item = next(x for x in manifest['files'] if x['path'] == rel)
+    path = ROOT / rel
+    check(path, item)
+    data = path.read_bytes()
+    root = sorted({m.decode() for m in BUILD_ROOT.findall(data)})
+    if len(root) != 1:
+        raise ValueError(f'{len(root)} build roots in {rel}')
+    paths = {m.decode() for m in SOURCE.findall(data)}
+    paths = {p[p.index('/home/'):] if '/home/' in p and not p.startswith('/home/') else p for p in paths}
+    versions = {}
+    for name, version in REGISTRY.findall(data):
+        versions.setdefault(name.decode(), []).append(version.decode())
+    return rel, item['sha256'], data, root[0].rsplit('/code_', 1)[0], paths, versions
 
 
 def index_path(name):
@@ -310,26 +333,13 @@ def main():
     parser.add_argument('--release', required=True, choices=['94', '115'])
     parser.add_argument('--output', type=Path)
     args = parser.parse_args()
-    path = ROOT / f'artifacts/node/{args.release}/hl-node'
-    digest = sha256(path)
-    expected = expected_digest(args.release)
-    if digest != expected:
-        raise ValueError(f'SHA-256 {digest} differs from the manifest {expected}')
-    data = path.read_bytes()
-    packet = analyze(data, args.release, digest)
-    root = packet['build_root']
-    if not root:
-        raise ValueError('No build root in the image')
-    paths = source_paths(data)[0]
-    versions_by_crate = {}
-    for row in packet['registry']:
-        versions_by_crate.setdefault(row['fields'][2], []).append(row['fields'][3])
-    present = sorted(d for d in OVERRIDE_PACKAGES if any(f'/{d}/' in p for p in paths))
+    artifact, digest, data, root, paths, versions_by_crate = load(args.release)
+    present = sorted(d for d in UPSTREAM if any(f'/{d}/' in p for p in paths))
     if not present:
         raise ValueError('No path override in this release')
     result = {
         'release': args.release,
-        'artifact': packet['artifact'],
+        'artifact': artifact,
         'sha256': digest,
         'index': INDEX,
         'overrides': pin(paths, root, data, versions_by_crate),

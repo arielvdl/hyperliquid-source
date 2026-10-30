@@ -1,5 +1,5 @@
 PYTHON ?= python3
-.PHONY: setup pull fetch verify test reproduce doctor index extents provenance fork-id path-origin override-versions catalogue catalogue-check rea-install rea-doctor rea-mcp rea-smoke rea-mcp-check rea-native-smoke
+.PHONY: setup pull fetch verify test reproduce doctor index extents catalogue catalogue-check provenance fork-id path-origin override-versions rea-install rea-doctor rea-mcp rea-smoke rea-mcp-check rea-native-smoke
 setup:
 	./scripts/setup.sh
 pull:
@@ -13,6 +13,11 @@ verify:
 	$(PYTHON) tools/verify_imports.py
 test:
 	$(PYTHON) -m unittest discover -s tests -v
+provenance:
+	$(PYTHON) tools/build_provenance.py
+path-origin:
+	$(PYTHON) tools/path_origin.py --release 94
+	$(PYTHON) tools/path_origin.py --release 115
 reproduce:
 	$(PYTHON) tools/reproduce.py
 doctor:
@@ -23,17 +28,11 @@ index:
 extents:
 	$(PYTHON) tools/fde_extents.py --release 94
 	$(PYTHON) tools/fde_extents.py --release 115
-provenance:
-	$(PYTHON) tools/build_provenance.py --release 94 --output work/prov/94.json
-	$(PYTHON) tools/build_provenance.py --release 115 --output work/prov/115.json
-path-origin:
-	$(PYTHON) tools/path_origin.py --release 94 --output work/prov/sourcing-94.json
-	$(PYTHON) tools/path_origin.py --release 115 --output work/prov/sourcing-115.json
 fork-id:
 	$(PYTHON) tools/git_fork_id.py --selftest
-	$(PYTHON) tools/git_fork_id.py --from-file research/work-items/RE-002/reth-url-candidates.txt --expect e231042ee7db3fb7 --output work/prov/reth-fork-id.json
+	$(PYTHON) tools/git_fork_id.py --from-file research/work-items/RE-002-build-provenance/reth-url-candidates.txt --expect e231042ee7db3fb7 --output work/prov/reth-fork-id.json
 override-versions:
-	$(PYTHON) tools/override_versions.py --release 94 --output work/prov/override-versions-94.json
+	$(PYTHON) tools/override_versions.py --release 94 --output research/work-items/RE-002-build-provenance/override-versions-94.json
 catalogue:
 	$(PYTHON) tools/catalogue.py
 catalogue-check:

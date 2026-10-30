@@ -1,11 +1,12 @@
 {
-  "artifact": "artifacts/node/94/hl-node",
+  "absolute_paths": 670,
   "build_root": "/home/ubuntu/hl",
   "collisions": [
     {
+      "from_directory_name": true,
       "origins": {
-        "override:hyper-fork": 41,
-        "registry": 25
+        "override:hyper-fork": 25,
+        "registry": 15
       },
       "package": "hyper",
       "shadowed": true
@@ -34,7 +35,7 @@
       "override:hyper-alloy-core-fork": 4
     },
     "alloy-trie": {
-      "registry": 6
+      "registry": 5
     },
     "anyhow": {
       "registry": 2
@@ -58,7 +59,7 @@
       "registry": 1
     },
     "base": {
-      "workspace": 39
+      "workspace": 37
     },
     "bincode": {
       "override:bincode-fork": 4
@@ -109,7 +110,7 @@
       "git:reth@3212af2": 2
     },
     "crates/rpc/rpc-eth-types": {
-      "git:reth@3212af2": 4
+      "git:reth@3212af2": 3
     },
     "crates/rpc/rpc-server-types": {
       "git:reth@3212af2": 1
@@ -157,7 +158,7 @@
       "workspace": 2
     },
     "h2": {
-      "registry": 56
+      "registry": 33
     },
     "hashbrown": {
       "registry": 2
@@ -172,8 +173,8 @@
       "registry": 1
     },
     "hyper": {
-      "override:hyper-fork": 41,
-      "registry": 25
+      "override:hyper-fork": 25,
+      "registry": 15
     },
     "hyper-tls": {
       "override:hyper-tls-fork": 1
@@ -206,7 +207,7 @@
       "registry": 1
     },
     "jsonrpsee-core": {
-      "registry": 5
+      "registry": 3
     },
     "jsonrpsee-types": {
       "registry": 1
@@ -242,10 +243,10 @@
       "registry": 1
     },
     "net_utils": {
-      "workspace": 13
+      "workspace": 12
     },
     "node": {
-      "workspace": 38
+      "workspace": 32
     },
     "num_cpus": {
       "registry": 1
@@ -408,16 +409,17 @@
     }
   },
   "origins": {
-    "git:reth@3212af2": 10,
+    "git:reth@3212af2": 9,
     "override:bincode-fork": 4,
     "override:hyper-alloy-core-fork": 6,
-    "override:hyper-fork": 41,
+    "override:hyper-fork": 25,
     "override:hyper-tls-fork": 1,
-    "registry": 489,
-    "workspace": 181
+    "registry": 453,
+    "workspace": 172
   },
-  "packages": 131,
-  "release": "94",
+  "relative_paths": 0,
   "sha256": "3b7179cd967d1b13b683e05debfc685ad4c750e918226402d5d575eff1c0459f",
-  "sources": 732
+  "sources": 670,
+  "target": "artifacts/node/94/hl-node",
+  "tool": "tools/path_origin.py"
 }

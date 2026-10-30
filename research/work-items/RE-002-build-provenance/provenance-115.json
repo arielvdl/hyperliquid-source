@@ -1,0 +1,2247 @@
+{
+ "facts": [
+  {
+   "evidence": {
+    "file_offset": "0x10",
+    "section": null
+   },
+   "key": "elf.type",
+   "label": "exact",
+   "value": "DYN"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x12",
+    "section": null
+   },
+   "key": "elf.machine",
+   "label": "exact",
+   "value": "x86-64"
+  },
+  {
+   "evidence": {
+    "note": "section table lookup"
+   },
+   "key": "elf.has_symtab",
+   "label": "exact",
+   "value": false
+  },
+  {
+   "evidence": {
+    "note": "section table lookup"
+   },
+   "key": "elf.debug_sections",
+   "label": "exact",
+   "value": []
+  },
+  {
+   "evidence": {
+    "note": "absent note means no IBT/SHSTK property was recorded by the linker"
+   },
+   "key": "elf.has_gnu_property_note",
+   "label": "exact",
+   "value": false
+  },
+  {
+   "evidence": {
+    "file_offset": "0x64fce08",
+    "section": ".comment"
+   },
+   "key": "comment",
+   "label": "exact",
+   "value": "rustc version 1.95.0 (59807616e 2026-04-14)"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x64fce34",
+    "section": ".comment"
+   },
+   "key": "comment",
+   "label": "exact",
+   "value": "Linker: LLD 22.1.2 (/checkout/src/llvm-project/llvm 1cb4e3833c1919c2e6fb579a23ac0e2b22587b7e)"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x64fce93",
+    "section": ".comment"
+   },
+   "key": "comment",
+   "label": "exact",
+   "value": "GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x64fcec0",
+    "section": ".comment"
+   },
+   "key": "comment",
+   "label": "exact",
+   "value": "clang version 22.1.0-rc2"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x2e0",
+    "section": ".interp"
+   },
+   "key": "interp",
+   "label": "exact",
+   "value": "/lib64/ld-linux-x86-64.so.2"
+  },
+  {
+   "evidence": {
+    "note": "program header"
+   },
+   "key": "segment.GNU_RELRO",
+   "label": "exact",
+   "value": "R"
+  },
+  {
+   "evidence": {
+    "note": "program header"
+   },
+   "key": "segment.GNU_EH_FRAME",
+   "label": "exact",
+   "value": "R"
+  },
+  {
+   "evidence": {
+    "note": "program header"
+   },
+   "key": "segment.GNU_STACK",
+   "label": "exact",
+   "value": "RW"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x64dd248",
+    "section": ".dynamic"
+   },
+   "key": "dynamic.needed",
+   "label": "exact",
+   "value": [
+    "libstdc++.so.6",
+    "libssl.so.3",
+    "libcrypto.so.3",
+    "libgcc_s.so.1",
+    "libm.so.6",
+    "libc.so.6",
+    "ld-linux-x86-64.so.2"
+   ]
+  },
+  {
+   "evidence": {
+    "file_offset": "0x64dd248",
+    "section": ".dynamic"
+   },
+   "key": "dynamic.bind_now",
+   "label": "exact",
+   "value": true
+  },
+  {
+   "evidence": {
+    "file_offset": "0x64dd248",
+    "section": ".dynamic"
+   },
+   "key": "dynamic.pie_flag",
+   "label": "exact",
+   "value": true
+  },
+  {
+   "evidence": {
+    "file_offset": "0x64dd248",
+    "section": ".dynamic"
+   },
+   "key": "dynamic.runpath",
+   "label": "exact",
+   "value": []
+  },
+  {
+   "evidence": {
+    "file_offset": "0x3af0",
+    "section": ".dynstr"
+   },
+   "key": "dynamic.hardening_imports",
+   "label": "exact",
+   "value": [
+    "__fprintf_chk",
+    "__memcpy_chk",
+    "__memset_chk",
+    "__realpath_chk",
+    "__snprintf_chk",
+    "__stack_chk_fail",
+    "__strncpy_chk",
+    "__vsnprintf_chk"
+   ]
+  },
+  {
+   "evidence": {
+    "file_offset": "0x3af0",
+    "section": ".dynstr"
+   },
+   "key": "dynamic.max_symbol_versions",
+   "label": "exact",
+   "value": {
+    "CXXABI": "1.3.11",
+    "GCC": "4.2.0",
+    "GLIBC": "2.39",
+    "GLIBCXX": "3.4.30",
+    "OPENSSL": "3.0.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430444",
+    "occurrences": 110,
+    "section": ".rodata"
+   },
+   "key": "rustc.commit_path",
+   "label": "exact",
+   "value": "59807616e1fa2540724bfbac14d7976d7e4a3860"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430405",
+    "occurrences": 863,
+    "section": ".rodata"
+   },
+   "key": "source_root",
+   "label": "exact",
+   "value": "/home/ubuntu/hl/code_Mainnet"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x434850",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_forks_dir",
+   "label": "exact",
+   "value": "bincode-fork"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4305e9",
+    "occurrences": 200,
+    "section": ".rodata"
+   },
+   "key": "crate.z_forks_dir",
+   "label": "exact",
+   "value": "hyper-fork"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43ab2d",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_forks_dir",
+   "label": "exact",
+   "value": "hyper-tls-fork"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44730b",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_forks_dir",
+   "label": "exact",
+   "value": "reth-chainspec"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44eb36",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_forks_dir",
+   "label": "exact",
+   "value": "reth-ethereum-forks"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4421f2",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_forks_dir",
+   "label": "exact",
+   "value": "reth-rpc-eth-types"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43804f",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_forks_dir",
+   "label": "exact",
+   "value": "reth-rpc-server-types"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x439163",
+    "occurrences": 12,
+    "section": ".rodata"
+   },
+   "key": "crate.z_forks_dir",
+   "label": "exact",
+   "value": "revm-precompile"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x439881",
+    "occurrences": 10,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-consensus",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44e2b3",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-eip2930",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x442d15",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-eip7702",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43ead9",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-eips",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x435cad",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-evm",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x447a37",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-primitives",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43256b",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-rlp",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x440303",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-rpc-types-eth",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x435b77",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-sol-types",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x433bf3",
+    "occurrences": 30,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "alloy-trie",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4325a9",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "anyhow",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x432da3",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "arc-swap",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x443b70",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "ark-bn254",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43e46b",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "ark-ec",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430422",
+    "occurrences": 5,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "ark-ff-0.5.0",
+    "version_in_path": "0.5.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44dd3a",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "arrayvec",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4376bc",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "aurora-engine-modexp",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430a43",
+    "occurrences": 8,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "axum",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x432c7f",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "axum-core",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43f1ac",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "axum-extra",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x438a13",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "base64-0.20.0",
+    "version_in_path": "0.20.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43911a",
+    "occurrences": 6,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "bitvec",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43067a",
+    "occurrences": 7,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "blake3",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43c1c0",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "block-buffer-0.9.0",
+    "version_in_path": "0.9.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4346ab",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "blst",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x443045",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "bs58",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x431452",
+    "occurrences": 7,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "bytes",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4306b7",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "bzip2-sys",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4306ee",
+    "occurrences": 19,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "chrono",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43682a",
+    "occurrences": 11,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "clap",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4499e8",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "const-hex",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x431764",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "const-oid",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4355d4",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "crossbeam-deque",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x441105",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "crossbeam-epoch",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43dd97",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "curve25519-dalek-ng",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x441162",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "ethabi",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44f410",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "ethers-core",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x438b2e",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "foldhash",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43cda5",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "form_urlencoded",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x432775",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "futures-channel",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4347f2",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "futures-core",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4327bd",
+    "occurrences": 8,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "futures-util",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43062c",
+    "occurrences": 279,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "h2",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43b91e",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "hashbrown-0.15.2",
+    "version_in_path": "0.15.2"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x449db5",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "hashbrown-0.16.1",
+    "version_in_path": "0.16.1"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x431b46",
+    "occurrences": 9,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "http-0.2.12",
+    "version_in_path": "0.2.12"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x435a9a",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "httparse",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43e135",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "httpdate",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4319b4",
+    "occurrences": 149,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "hyper",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44909e",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "iana-time-zone",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x437cf8",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "icu_collections",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43af05",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "icu_normalizer",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x447076",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "idna",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4490e3",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "idna_adapter",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43ec40",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "impl-serde",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4336d0",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "indexmap",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44612a",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "itertools-0.13.0",
+    "version_in_path": "0.13.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43eb61",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "itoa",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430ada",
+    "occurrences": 8,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "jsonrpsee-core",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44e5b0",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "jsonrpsee-types",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x434b63",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "k256",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43fdde",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "keccak-asm",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x437ebd",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "log-mdc",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x436c68",
+    "occurrences": 7,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "log4rs",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x446eb5",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "lru",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43901a",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "lz4_flex",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4334fa",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "matchit",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x433c6e",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "memchr",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43be4c",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "mime",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44fb37",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "mio",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44059c",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "native-tls",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44afae",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "num_cpus",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x439844",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "nybbles",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x434bae",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "once_cell",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43c00f",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "openssl",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43b1c1",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "openssl-sys",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x434e9e",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "parking_lot",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44f8af",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "parking_lot_core",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4416cb",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "percent-encoding",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44f0b5",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "primitive-types",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x439fa2",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rand-0.8.5",
+    "version_in_path": "0.8.5"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43f6fd",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rand_chacha-0.3.1",
+    "version_in_path": "0.3.1"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44a02f",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rand_core-0.6.4",
+    "version_in_path": "0.6.4"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430896",
+    "occurrences": 8,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rayon",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430924",
+    "occurrences": 5,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rayon-core",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4358e5",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "revm-bytecode",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x432f18",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "revm-context",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x438c04",
+    "occurrences": 6,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "revm-context-interface",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4348ee",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "revm-handler",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x434977",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "revm-inspector",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43096b",
+    "occurrences": 9,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "revm-interpreter",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44ac02",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "revm-state",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4460f2",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "ripemd",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43ca64",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rmp-serde",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430b2a",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rocksdb",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x433a50",
+    "occurrences": 11,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "ruint",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430d98",
+    "occurrences": 9,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rust_decimal",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43a113",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "rustc-hex",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44b9f5",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "sec1",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4380c6",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "secp256k1",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44f9f7",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "secp256k1-0.29.0",
+    "version_in_path": "0.29.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x430dda",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "secp256k1-0.30.0",
+    "version_in_path": "0.30.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x432fa4",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "secp256k1-sys",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44b137",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "secp256k1-sys-0.10.0",
+    "version_in_path": "0.10.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43ad68",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "serde",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4366fe",
+    "occurrences": 4,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "serde_core",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4365fd",
+    "occurrences": 5,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "serde_json",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44034b",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "serde_path_to_error",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x448c52",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "sha2",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x434f8a",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "sha2-0.9.9",
+    "version_in_path": "0.9.9"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x444338",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "shlex-1.3.0",
+    "version_in_path": "1.3.0"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43a14e",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "signal-hook-registry",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44a989",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "slab",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44e7bd",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "smallvec",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44c145",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "socket2",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4435e8",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "socket2-0.4.10",
+    "version_in_path": "0.4.10"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x437c76",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "socket2-0.5.7",
+    "version_in_path": "0.5.7"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x441f3e",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "subtle",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x436fb8",
+    "occurrences": 7,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "sysinfo",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x436ff9",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "textwrap",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44f2d4",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "threadpool",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x431f0a",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "tiny-keccak",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x431633",
+    "occurrences": 63,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "tokio",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x442fa1",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "tokio-native-tls",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43663a",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "tokio-util",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44dac4",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "tower-0.4.13",
+    "version_in_path": "0.4.13"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4381e3",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "tracing-core",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4444e0",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "unicode-width",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43602a",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "url",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x436060",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "want",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x44451f",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.z_vendor_dir",
+   "label": "exact",
+   "value": {
+    "dir": "zmij",
+    "version_in_path": null
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4380e8",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.std_dep",
+   "label": "exact",
+   "value": {
+    "name": "addr2line",
+    "version": "0.25.1"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43182e",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.std_dep",
+   "label": "exact",
+   "value": {
+    "name": "gimli",
+    "version": "0.32.3"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43acee",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "crate.std_dep",
+   "label": "exact",
+   "value": {
+    "name": "hashbrown",
+    "version": "0.16.1"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x4433aa",
+    "occurrences": 2,
+    "section": ".rodata"
+   },
+   "key": "crate.std_dep",
+   "label": "exact",
+   "value": {
+    "name": "miniz_oxide",
+    "version": "0.8.9"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x43b242",
+    "occurrences": 3,
+    "section": ".rodata"
+   },
+   "key": "crate.std_dep",
+   "label": "exact",
+   "value": {
+    "name": "rustc-demangle",
+    "version": "0.1.27"
+   }
+  },
+  {
+   "evidence": {
+    "file_offset": "0x95e057",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "jemalloc.version_string",
+   "label": "exact",
+   "value": "5.3.0-1-ge13ca993e8ccb9ba9847cc330696e02839f328f7"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x46eadd",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "string.overflow_panic",
+   "label": "exact",
+   "value": "attempt to add with overflow"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x46eaf9",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "string.overflow_panic",
+   "label": "exact",
+   "value": "attempt to multiply with overflow"
+  },
+  {
+   "evidence": {
+    "file_offset": "0x46eb80",
+    "occurrences": 1,
+    "section": ".rodata"
+   },
+   "key": "string.overflow_panic",
+   "label": "exact",
+   "value": "attempt to subtract with overflow"
+  },
+  {
+   "evidence": {},
+   "key": "string.ub_checks_message_present",
+   "label": "exact",
+   "value": false
+  },
+  {
+   "evidence": {
+    "file_offset": "0x16c2c0",
+    "section": ".gcc_except_table"
+   },
+   "key": "section.gcc_except_table_size",
+   "label": "exact",
+   "value": 2900276
+  },
+  {
+   "evidence": {
+    "reasoning": "LLD path /checkout/src/llvm-project is the rust-lang CI build root, and stable x86_64-unknown-linux-gnu has linked with self-contained rust-lld by default since 1.90; confirm by matching `rustc -vV` LLVM version for the stamped release"
+   },
+   "key": "linker",
+   "label": "inferred",
+   "value": "rust-lld bundled with the stamped rustc"
+  },
+  {
+   "evidence": {
+    "reasoning": "GCC .comment stamp names the 24.04 package and the newest GLIBC symbol version required is 2.39, the 24.04 release glibc; host kernel and image digest are not recorded"
+   },
+   "key": "build_host",
+   "label": "inferred",
+   "value": "Ubuntu 24.04 (glibc 2.39, GCC 13.3.0 C runtime objects)"
+  },
+  {
+   "evidence": {
+    "reasoning": "x86-64 ELF using the glibc dynamic loader; no triple string is required to be embedded"
+   },
+   "key": "target_triple",
+   "label": "inferred",
+   "value": "x86_64-unknown-linux-gnu"
+  },
+  {
+   "evidence": {
+    "reasoning": "bundled jemalloc version string present; crate (likely tikv-jemalloc-sys) version is not visible unless a registry/vendor path names it"
+   },
+   "key": "global_allocator",
+   "label": "inferred",
+   "value": "jemalloc 5.3.0-1-ge13ca993e8ccb9ba9847cc330696e02839f328f7"
+  },
+  {
+   "evidence": {
+    "reasoning": ".gcc_except_table is 2900276 bytes; panic=abort emits no Rust cleanup landing pads, though linked C++ code also contributes; confirm by checking LSDA owners"
+   },
+   "key": "panic_strategy",
+   "label": "inferred",
+   "value": "unwind"
+  },
+  {
+   "evidence": {
+    "reasoning": "std ub_checks precondition message is absent; it is emitted when debug assertions are enabled in the calling crate. Weak: absence can also mean no checked API was used"
+   },
+   "key": "debug_assertions",
+   "label": "inferred",
+   "value": "off (release-like profile)"
+  },
+  {
+   "evidence": {
+    "reasoning": "no .symtab or .debug* sections; this could be Cargo strip= or a post-link strip"
+   },
+   "key": "stripped",
+   "label": "inferred",
+   "value": "symbols and debuginfo removed"
+  },
+  {
+   "evidence": {
+    "would_resolve": "overflow panic strings exist, but only callers into core panic_const helpers from first-party code would show the profile; needs xref analysis (RE-001)"
+   },
+   "key": "overflow_checks",
+   "label": "unknown",
+   "value": null
+  },
+  {
+   "evidence": {
+    "would_resolve": "compare instruction patterns of a rebuilt known function at each opt-level"
+   },
+   "key": "opt_level",
+   "label": "unknown",
+   "value": null
+  },
+  {
+   "evidence": {
+    "would_resolve": "cross-crate inlining evidence or a matched rebuild; not stored in the ELF"
+   },
+   "key": "lto",
+   "label": "unknown",
+   "value": null
+  },
+  {
+   "evidence": {
+    "would_resolve": "function ordering/partitioning in a matched rebuild"
+   },
+   "key": "codegen_units",
+   "label": "unknown",
+   "value": null
+  },
+  {
+   "evidence": {
+    "would_resolve": "unconditional AVX/BMI use outside runtime-dispatched paths"
+   },
+   "key": "target_cpu_features",
+   "label": "unknown",
+   "value": null
+  },
+  {
+   "evidence": {
+    "would_resolve": "prologue survey (push rbp; mov rbp,rsp) across FDE-bounded functions"
+   },
+   "key": "frame_pointers",
+   "label": "unknown",
+   "value": null
+  },
+  {
+   "evidence": {
+    "would_resolve": "not embedded; needs the original build config or a matched rebuild"
+   },
+   "key": "rustflags",
+   "label": "unknown",
+   "value": null
+  },
+  {
+   "evidence": {
+    "would_resolve": "not embedded; registry/vendor paths give versions only where visible"
+   },
+   "key": "cargo_lock",
+   "label": "unknown",
+   "value": null
+  },
+  {
+   "evidence": {
+    "would_resolve": "first-party paths carry no versions"
+   },
+   "key": "first_party_crate_versions",
+   "label": "unknown",
+   "value": null
+  }
+ ],
+ "sha256": "a6e2897cd051213d004802deca416e8eca62b7a8278fa39f249e98c3867b5301",
+ "size": 105896032,
+ "target": "artifacts/node/115/hl-node",
+ "tool": "tools/build_provenance.py"
+}
